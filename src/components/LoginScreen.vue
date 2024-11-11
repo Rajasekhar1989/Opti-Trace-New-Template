@@ -32,7 +32,7 @@
                     </form>         
                     
                     <div class="flex-box">                        
-                        <ion-button class="btnprimary" mode="ios"><span class="svgicon md" v-html="$store.state.login"></span> <span class="svglabel">Login</span></ion-button>
+                        <ion-button @click="btnLogin" class="btnprimary" mode="ios"><span class="svgicon md" v-html="$store.state.login"></span> <span class="svglabel">Login</span></ion-button>
                     </div>
                 </div>
             </div>            
@@ -49,6 +49,15 @@
       return {
         router,
       };
-    },    
+    },
+    methods: {
+      btnLogin: function() {
+        localStorage.setItem("isLogin", "suresh");
+        this.router.push("/dashboard");
+        setTimeout(() => {
+          window.location.reload();
+        }, 300);
+      }
+    }
   }
   </script>

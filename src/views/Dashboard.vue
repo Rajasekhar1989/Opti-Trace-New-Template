@@ -1,13 +1,26 @@
 <template>
-  <ion-page>
-    <div id="container">
-      <h5>Dashboard Page</h5>
-    </div>
+  <ion-page v-if="false">
+    <div class="wrapper">
+      <div class="card">
+        <div class="devices">      
+testtttt
+        </div>
+      </div>    
+    </div>    
   </ion-page>
+  <SelectDevice v-if="false" />  
+  <ConnectionEstablished v-if="false" />
+  <MainMenu />
 </template>
 
 <script>
+
 import { useRouter } from "vue-router";
+import SelectDevice from "./SelectDevice.vue";
+import ConnectionEstablished from "./ConnectionEstablished.vue";
+import MainMenu from "./MainMenu.vue";
+
+
 export default {
   name: "Dashboard",
   setup() {
@@ -16,5 +29,10 @@ export default {
       router,
     };
   },
+  components: {
+    SelectDevice,
+    ConnectionEstablished,MainMenu
+
+  }
 };
 </script>

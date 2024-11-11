@@ -26,9 +26,9 @@ export default {
   name: "Sidemenu",
   methods: {
     btnLogout: function () {
-      localStorage.removeItem("isWelcome");
+      localStorage.removeItem("isLogin");
+      this.$router.push("/login");
       setTimeout(() => {
-        this.$router.push("/welcome");
         window.location.reload();
       }, 300);
     },

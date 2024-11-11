@@ -1,5 +1,5 @@
 <template>
-  <ion-app v-if="isLogin">        
+  <ion-app v-if="isLogin" class="wrapper">        
     <Login v-if="false" />
     <WelcomeScreen v-if="false" />
     <ConnectionType v-if="false" />
@@ -13,10 +13,9 @@
     <Header />
 
     <!-- Main Content -->
-    <ion-content id="main-content" :fullscreen="true">
-      <ion-router-outlet :animated="false" />
+    <ion-content id="main-content" :fullscreen="true" class="wrapper">      
+        <ion-router-outlet :animated="false" />      
     </ion-content>
-
     <!-- Footer -->
     <Footer />
   </ion-app>

@@ -51,12 +51,25 @@ body{
   padding: 15px;  
   background: rgb(238,247,255);
   background: linear-gradient(180deg, rgba(238,247,255,1) 0%, rgba(177,216,251,1) 100%);
+  --background: rgb(238,247,255);
+  --background: linear-gradient(180deg, rgba(238,247,255,1) 0%, rgba(177,216,251,1) 100%);
+  overflow: hidden;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+  --padding-start: 15px;
+  --padding-end: 15px;
   /* background-image:url(../images/app_bg.png) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
   z-index: -1; */
+}
+.wrapperinner{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heading{ margin-left: 5px;font-size:var(--size30);margin-bottom: 20px; margin-top: 0;color: var(--headingcolor);font-weight: normal; line-height: 32px;}
@@ -69,23 +82,10 @@ body{
 }
 
 .networkinfo{ display: inline-block;margin-left: 5px;margin-top: 5px;}
-.networkinfo p{ display: flex;background: #2e61aa;color: #fff;margin: 0;align-items: center;padding: 7px 10px 0;font-size: 22px;
-border-radius: 5px;}
+.networkinfo p{ display: flex;background: #2e61aa;color: #fff;margin: 0;align-items: center;padding: 6px 10px 0;font-size: 22px;border-radius: 5px;}
 .networkinfo p span{ line-height: 22px;}
-.card{
-  box-shadow:0px 1px 4px 0px rgba(0,0,0,0.25);
-  background: #e2f1ff;
-  min-height: 60px;
-  padding:15px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 767px;
-}
-.card.center{
-  text-align: center;
-}
-
-
+.card{box-shadow:0px 1px 4px 0px rgba(0,0,0,0.25);background: #ffffff;min-height: 60px;padding:15px;border-radius: 12px;width: 100%;max-width: 767px;}
+.card.center{text-align: center;}
 .card h2{font-size: 30px; letter-spacing: 0.5px;line-height: 24px;font-weight: 500;}
 .card h2 .version{ display: block; font-size: 13px; color: var(--black);line-height: 20px;letter-spacing: 0.5px;font-weight: normal;}
 .card h3.card-title{ font-size: var(--size18);}
@@ -97,6 +97,7 @@ ion-button{
   min-height: 30px;
   width: 100%;
   font-size: 20px;  
+  margin: 0;
 }
 ion-button.md{
   max-width: 135px;
@@ -123,6 +124,21 @@ background: linear-gradient(180deg, rgba(114,180,237,1) 0%, rgba(14,98,171,1) 10
   padding-top: 15px;
   border-radius: 50px;
 }
+.btnerror::part(native){
+  background: rgb(255,161,161);
+  background: linear-gradient(90deg, rgba(255,161,161,1) 0%, rgba(248,67,67,1) 54%);
+  --background-focused:linear-gradient(90deg, rgba(255,161,161,1) 0%, rgba(248,67,67,1) 54%);
+  --background-activated: linear-gradient(270deg, rgba(255,161,161,1) 0%, rgba(248,67,67,1) 54%);
+  border-radius: 12px;
+  font-weight: 300;  
+  letter-spacing: 0.5px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.iconbtn::part(native){background: transparent;box-shadow: none;}
+
+
 .middlearea{
   height: calc( 100vh - 220px );
   display: flex;
@@ -133,6 +149,8 @@ background: linear-gradient(180deg, rgba(114,180,237,1) 0%, rgba(14,98,171,1) 10
 .bottomarea{ text-align: center;}
 .bottomarea h5{ font-weight: normal;font-size: 16px;color:var(--black); line-height: 16px;}
 .bottomarea img{ margin-bottom: 10px;}
+
+ion-router-outlet{ position: unset;}
 
 ion-segment{
   background: #6399d7;
@@ -185,4 +203,47 @@ ion-select{--placeholder-color:var(--black);--placeholder-opacity:0.8;border-bot
 ion-select::part(label) {font-size: 20px;color:var(--headingcolor);height: 25px;}
 ion-select::part(container){display: block;text-align: left; font-size: 22px; --placeholder-color: var(--paragraphcolor); color: var(--paragraphcolor);}
 
+.main-header{ background: #fff; }
+.main-header.lg ion-toolbar{--min-height: 95px;}
+.main-header ion-toolbar{--min-height:60px;--background-color:transparent; --background: rgb(234 244 254);background: rgb(226 239 253);}
+.main-header .toolbar-title-default:last-of-type{--border-width:0px !important; padding-top: 10px;}
+.main-header .header-background{-webkit-backdrop-filter:unset; backdrop-filter:unset;}
+ion-menu-button{ padding-top: 4px;}
+.main-header ion-title{padding-inline-start: 55px;}
 
+.right-btns {max-width: 170px;display: flex;float: right;padding-right: 15px;}
+.right-btns ion-button{margin-left:25px;}
+.iconbtn.home svg{ width: 24px; height: 26px; }
+.right-btns ion-button svg{width: 22px; height: 30px;}
+.right-btns ion-button::part(native){ padding: 0;opacity: 1;}
+
+ion-title{ font-weight: 500;font-size: 24px; color: var(--headingcolor); padding-top: 9px;line-height: 26px; text-align: left;}
+ion-title span{ display: block; font-size: 16px; color: var(--paragraphcolor);}
+ion-title span svg{ width: 20px; height: 20px; position: relative; top: 1px;}
+ion-menu-button span svg{ width: 34px;height: 28px;}
+ion-title .connected-device{color:#fff;background: rgb(14,98,171);background: linear-gradient(90deg, rgba(14,98,171,1) 0%, rgba(0,115,215,1) 50%, rgba(0,87,163,1) 100%);display: inline-block;
+border-radius: 8px;padding: 4px 8px 1px 8px;font-size: 20px;}
+ion-title .connected-device em{ fill: #ffffff; }
+
+/* ion-footer{} */
+ion-footer ion-toolbar{--padding-top: 10px;--padding-start: 15px;--padding-end: 15px;--background:transparent; }
+ion-footer.footer-toolbar-padding ion-toolbar:last-of-type{ padding-bottom: 10px;}
+ion-footer.footer-toolbar-padding ion-toolbar:first-of-type{ --border-width: 0;background: rgba(177, 216, 251, 1);}
+
+.devicelist{background:transparent;}
+.devicelist ion-item{--background:transparent;--inner-border-width:0; margin-bottom: 10px;}
+.devicelist ion-item::part(native){padding-left: 0;--inner-padding-end:0}
+.devicelist ion-item:last-child{ margin-bottom: 0;}
+.devicelist ion-item ion-label{padding:10px;font-size: 22px !important;margin-right: 0; position: relative; margin: 0; background-color: #f8f8f8; border-radius: 10px;}
+.device-name{padding-left: 30px;}
+.devicelist ion-label svg{ width: 19px; height: 19px;}
+/* .devicelist ion-label .angle-icon{padding-top: 3px;} */
+.devicelist ion-label .angle-icon{float: right;padding-top: 20px;}
+.devicelist ion-label .more{ padding-left: 30px;}
+.more .status .dot{width: 10px;height: 10px;background-color: green;display: inline-block;border-radius: 50px;}
+.more .status .dot.error{background-color: rgb(248, 55, 21)}
+.devicelist ion-label .more span{font-size: 16px; color: var(--paragraphcolor); display: block;line-height: 18px;}
+
+ion-label .device-icon{position: absolute; left: 11px;top: 14px;height: 30px;}
+.devicelist ion-item .smallicon span:first-child svg{ width: 24px;height:28px;}
+.devicelist.menu .angle-icon {margin-top: 5px;height: 24px;padding-top: 0;}
