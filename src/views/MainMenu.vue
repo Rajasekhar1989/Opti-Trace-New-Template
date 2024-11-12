@@ -5,7 +5,7 @@
           <ion-item>
             <ion-label>
               <div>
-                <span class="device-icon" v-html="$store.state.listroundbulleticon"></span>
+                <span class="device-icon" v-html="$store.state.healthstatus"></span>
                 <span class="device-name">Health Status</span>
                 <span class="angle-icon" v-html="$store.state.angleright"></span>            
               </div>                    
@@ -15,7 +15,7 @@
           <ion-item>
             <ion-label>
               <div>
-                <span class="device-icon" v-html="$store.state.serversetting"></span>
+                <span class="device-icon" v-html="$store.state.deviceconfig"></span>
                 <span class="device-name">Device Configuration</span>
                 <span class="angle-icon" v-html="$store.state.angleright"></span> 
               </div>            

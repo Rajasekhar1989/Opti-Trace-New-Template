@@ -7,7 +7,7 @@
                     <p><span class="svgicon" v-html="$store.state.wifi"></span> <span> CADA-1TS1</span></p>
                 </div>
             </div>        
-            <div class="middlearea" style="height: calc(100vh - 90px);">
+            <div class="middlearea" style="height: calc(100vh - 165px);">
                 <div class="card center about">
                     <form action="" class="login">
                         <ion-row>
@@ -29,19 +29,23 @@
                                 
                             </ion-col>
                         </ion-row>
-                    </form>         
-                    
+                    </form>
                     <div class="flex-box">                        
                         <ion-button @click="btnLogin" class="btnprimary" mode="ios"><span class="svgicon md" v-html="$store.state.login"></span> <span class="svglabel">Login</span></ion-button>
-                    </div>
+                    </div>                     
                 </div>
-            </div>            
+            </div>    
+            <div class="bottomarea">    
+                <ion-button @click="btnBack" mode="ios" class="btnprimary">Back</ion-button>                        
+            </div>        
         </div>
     </ion-page>  
   </template>
   
   <script>
-  import { useRouter } from 'vue-router';  
+  import { useRouter } from 'vue-router';
+  import eventBus from '../assets/script/eventBus';
+
   export default {
     name: "LoginScreen",
     setup() {
@@ -57,7 +61,11 @@
         setTimeout(() => {
           window.location.reload();
         }, 300);
-      }
+      },
+        btnBack: function() {
+            eventBus().emitter.emit("evtbtnback");
+        }
     }
+    
   }
   </script>

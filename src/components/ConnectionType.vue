@@ -23,13 +23,10 @@
                 </ion-select>               
                 
                 <div class="flex-box space-between">
-                    <ion-button class="btnprimary md icon-label"><span class="svgicon md" v-html="$store.state.sync"></span> <span class="svglabel">Scan</span></ion-button>
-                    <ion-button class="btnprimary md"><span class="svgicon md"></span> <span class="svglabel">Connect</span></ion-button>
+                  <ion-button class="btnprimary md icon-label" mode="ios"><span class="svgicon md" v-html="$store.state.sync"></span> <span class="svglabel">Scan</span></ion-button>
+                  <ion-button class="btnprimary md" @click="btnConClick()" mode="ios"><span class="svgicon md"></span> <span class="svglabel">Connect</span></ion-button>
                 </div>
             </div>
-        </div>
-        <div class="bottomarea">            
-            <ion-button mode="ios" class="btnprimary">Next</ion-button>
         </div>
       </div>
     </ion-page>  
@@ -37,14 +34,20 @@
   
   <script>
   import { useRouter } from 'vue-router';
+  import eventBus  from '../assets/script/eventBus';
   
   export default {
-    name: "WelcomeScreen",
+    name: "ConnectionType",
     setup() {
       const router = useRouter();
       return {
         router,
       };
+    },
+    methods: {
+      btnConClick() {
+        eventBus().emitter.emit("evtconnectiontype");
+      },
     },
   }
   </script>

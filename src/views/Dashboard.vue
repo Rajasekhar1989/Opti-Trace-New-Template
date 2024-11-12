@@ -1,5 +1,5 @@
 <template>
-  <ion-page v-if="false">
+  <ion-page v-show="false">
     <div class="wrapper">
       <div class="card">
         <div class="devices">      
@@ -8,8 +8,8 @@ testtttt
       </div>    
     </div>    
   </ion-page>
-  <SelectDevice v-if="false" />  
-  <ConnectionEstablished v-if="false" />
+  <SelectDevice v-show="false" />  
+  <ConnectionEstablished v-show="false" />
   <MainMenu />
 </template>
 
