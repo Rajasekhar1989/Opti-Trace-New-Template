@@ -9,7 +9,13 @@
         <!-- <ion-title mode="ios">Connection Established <span>Showing connected menu</span>
           <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
         </ion-title> -->
-        <ion-title mode="ios">Main Menu <span>Showing Menu</span>
+        <!-- <ion-title mode="ios">Main Menu <span>Showing Menu</span>
+          <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
+        </ion-title> -->
+        <!-- <ion-title mode="ios">Health Status <span>Device health status</span>
+          <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
+        </ion-title> -->
+        <ion-title mode="ios">Device Configuration <span>Device config</span>
           <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
         </ion-title>
 

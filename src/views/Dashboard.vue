@@ -2,15 +2,15 @@
   <ion-page v-show="false">
     <div class="wrapper">
       <div class="card">
-        <div class="devices">      
-testtttt
-        </div>
+        <div class="devices"></div>
       </div>    
     </div>    
   </ion-page>
   <SelectDevice v-show="false" />  
   <ConnectionEstablished v-show="false" />
-  <MainMenu />
+  <MainMenu v-show="false" />
+  <HealthStatus v-show="false" />
+  <DeviceConfiguration />
 </template>
 
 <script>
@@ -19,6 +19,8 @@ import { useRouter } from "vue-router";
 import SelectDevice from "./SelectDevice.vue";
 import ConnectionEstablished from "./ConnectionEstablished.vue";
 import MainMenu from "./MainMenu.vue";
+import HealthStatus from "./amplifier/HealthStatus.vue";
+import DeviceConfiguration from "./amplifier/DeviceConfiguration.vue";
 
 
 export default {
@@ -31,7 +33,7 @@ export default {
   },
   components: {
     SelectDevice,
-    ConnectionEstablished,MainMenu
+    ConnectionEstablished,MainMenu,HealthStatus, DeviceConfiguration
 
   }
 };
