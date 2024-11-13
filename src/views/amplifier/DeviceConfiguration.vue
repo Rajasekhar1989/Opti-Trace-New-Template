@@ -1,6 +1,6 @@
 <template>
     <div>      
-      <div class="card">      
+      <div class="card auto">      
         <div class="customselect">
             <ion-select label="Universal Plugin" label-placement="stacked" interface="action-sheet" placeholder="1.2GHz Enhancer">
                 <ion-select-option value="0">1.2GHz Enhancer</ion-select-option>
@@ -12,7 +12,7 @@
             <ion-button class="btnprimary" mode="ios"><span> Set</span></ion-button>
         </div>            
       </div>
-      <div class="card">  
+      <div class="card auto">  
         <h5 class="cardtitle">Auxiliary Plug-in</h5>    
         <div class="customselect">
             <ion-select label="Type" label-placement="stacked" interface="action-sheet" placeholder="2-Way">
@@ -35,9 +35,13 @@
             <ion-button class="btnprimary" mode="ios"><span> Set</span></ion-button>
         </div>            
       </div>
-      <div class="card">  
+      <div class="card auto">  
         <h5 class="cardtitle">Trunking pad Value</h5>    
         <SpinControl />
+        <SpinControl />
+        <div class="setBtn center">
+            <ion-button class="btnprimary" mode="ios"><span> Set</span></ion-button>
+        </div> 
       </div>
     </div>  
   </template>

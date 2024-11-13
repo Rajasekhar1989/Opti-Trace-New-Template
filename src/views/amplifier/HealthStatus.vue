@@ -3,7 +3,7 @@
       <div class="alarmstatus">
         <ion-label class="error"><span v-html="$store.state.checkcircle"></span> <span>Status</span></ion-label>
       </div>
-      <div class="card">        
+      <div class="card auto">        
         <ion-list mode="ios" class="alarms">
        
             <ion-row>

@@ -15,7 +15,10 @@
         <!-- <ion-title mode="ios">Health Status <span>Device health status</span>
           <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
         </ion-title> -->
-        <ion-title mode="ios">Device Configuration <span>Device config</span>
+        <!-- <ion-title mode="ios">Device Configuration <span>Device config</span>
+          <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
+        </ion-title> -->
+        <ion-title mode="ios">Downstream Configuration <span>Downstream config</span>
           <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
         </ion-title>
 

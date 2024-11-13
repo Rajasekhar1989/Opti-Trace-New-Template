@@ -10,7 +10,8 @@
   <ConnectionEstablished v-show="false" />
   <MainMenu v-show="false" />
   <HealthStatus v-show="false" />
-  <DeviceConfiguration />
+  <DeviceConfiguration v-show="false" />
+  <DownstreamConfiguration />
 </template>
 
 <script>
@@ -21,6 +22,7 @@ import ConnectionEstablished from "./ConnectionEstablished.vue";
 import MainMenu from "./MainMenu.vue";
 import HealthStatus from "./amplifier/HealthStatus.vue";
 import DeviceConfiguration from "./amplifier/DeviceConfiguration.vue";
+import DownstreamConfiguration from "./amplifier/DownstreamConfiguration.vue";
 
 
 export default {
@@ -33,8 +35,11 @@ export default {
   },
   components: {
     SelectDevice,
-    ConnectionEstablished,MainMenu,HealthStatus, DeviceConfiguration
-
+    ConnectionEstablished,
+    MainMenu,
+    HealthStatus,
+    DeviceConfiguration,
+    DownstreamConfiguration
   }
 };
 </script>

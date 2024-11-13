@@ -1,12 +1,13 @@
 <template>
+  <div style="margin: 8px 0 15px;">  
     <ion-label class="label">{{ spincontrollabel }}</ion-label>
     <ion-item class="customSpincontrol" style="--background: transparent;--border-width: 0;--highlight-height:0px;--min-height:32px;--inner-border-width:0">		
         <ion-button
             @touchstart ="startDownSpin();" 
             @touchend="stopSpin();" 
             @touchcancel="stopSpin();" 
-            class="decrement-button" :id="spindown"><span>-</span></ion-button>
-        <span>
+            class="decrement-button" :id="spindown"><span v-html="$store.state.squareminus"></span></ion-button>
+        <span class="textbox">
             <input
                 type="text"
                 :step="steps"
@@ -25,8 +26,9 @@
             @touchstart ="startUpSpin();"
             @touchend="stopSpin();"
             @touchcancel="stopSpin();"
-        class="increment-button" :id="spinup"> <span>+</span> </ion-button>
+        class="increment-button" :id="spinup"> <span v-html="$store.state.squareplus"></span> </ion-button>
     </ion-item>
+  </div>
 </template>
 <script>
 import { useRouter } from "vue-router";
@@ -35,7 +37,7 @@ export default {
   name: "SpinControl",  
   data() {
     return {
-        spincontrollabel:"Title",
+        spincontrollabel:"Spin Label",
         minVal:0,
         maxVal:99,
         steps:1,
