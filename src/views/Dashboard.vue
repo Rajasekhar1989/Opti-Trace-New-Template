@@ -11,7 +11,13 @@
   <MainMenu v-show="false" />
   <HealthStatus v-show="false" />
   <DeviceConfiguration v-show="false" />
-  <DownstreamConfiguration />
+  <DownstreamConfiguration v-show="false" />
+  <UpstreamConfiguration v-show="false" />
+  <AdvancedDiagnostics v-show="false" />
+  <Utilities v-show="false" />
+  <!-- <Profiles v-show="false" /> -->
+  <!-- <SpectrumDisplay v-show="false" /> -->
+  <IngressControlSwitch />
 </template>
 
 <script>
@@ -23,6 +29,12 @@ import MainMenu from "./MainMenu.vue";
 import HealthStatus from "./amplifier/HealthStatus.vue";
 import DeviceConfiguration from "./amplifier/DeviceConfiguration.vue";
 import DownstreamConfiguration from "./amplifier/DownstreamConfiguration.vue";
+import UpstreamConfiguration from "./amplifier/UpstreamConfiguration.vue";
+import AdvancedDiagnostics from "./amplifier/AdvancedDiagnostics.vue";
+import Utilities from "./amplifier/Utilities.vue";
+// import Profiles from "./amplifier/Profiles.vue";
+import SpectrumDisplay from "../components/SpectrumDisplay.vue";
+import IngressControlSwitch from "./amplifier/IngressControlSwitch.vue";
 
 
 export default {
@@ -39,7 +51,13 @@ export default {
     MainMenu,
     HealthStatus,
     DeviceConfiguration,
-    DownstreamConfiguration
+    DownstreamConfiguration,
+    UpstreamConfiguration,
+    AdvancedDiagnostics,
+    Utilities,
+    // Profiles,
+    SpectrumDisplay,
+    IngressControlSwitch
   }
 };
 </script>
