@@ -1,4 +1,42 @@
 import store from "../../store";
+import { alertController } from '@ionic/vue';
+import router from "../../router/index";
+import eventBus from "./eventBus";
+
+/* Global variable */
+var getRouterPath = router.currentRoute.value.name;
+
+
+
+
+/*	Information Message:
+	-------------------
+	message 		: 	Message to be displayed.
+	fireEvtname 	: 	Event name to be fired.
+	routepath		:	Current router path.
+*/
+export const InformationMsg = async (message, fireEvtname) => {
+  const alert = await alertController.create({
+    message: message,
+    buttons: [
+      {
+        text: "OK",
+        handler: () => {
+          let evtname = "evtinfomsg" + fireEvtname +  getRouterPath ;
+          console.log(getRouterPath);
+
+          console.log("Information Event : ", evtname);
+          eventBus().emitter.emit(evtname);
+        },
+      },
+    ],
+    backdropDismiss: false,
+  });
+
+  await alert.present();
+};
+
+
 
 export function genDateTimeID () {		
 	var date_now;
