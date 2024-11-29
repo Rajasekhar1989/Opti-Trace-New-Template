@@ -71,13 +71,13 @@
         <div class="card auto">
             <ion-row class="align-items-center">
                 <ion-col size="12" size-sm="6" class="center">
-                    <ion-button class="btnprimary lg mb-10" mode="ios"> <span class="svglabel">Configure Settings</span></ion-button>                
+                    <ion-button class="btnprimary lg" mode="ios"> <span class="svglabel">Configure Settings</span></ion-button>                
                 </ion-col>
                 <ion-col size="12" size-sm="6" class="center">
-                    <ion-button class="btnprimary lg mb-10" mode="ios"> <span class="svglabel">Run Auto-Setup</span></ion-button>                
+                    <ion-button class="btnprimary lg" mode="ios"> <span class="svglabel">Run Auto-Setup</span></ion-button>                
                 </ion-col>
                 <ion-col size="12" size-sm="6" class="center">
-                    <ion-button class="btnprimary lg mb-10" mode="ios"> <span class="svglabel">Spectrum Display</span></ion-button>
+                    <ion-button class="btnprimary lg" mode="ios"> <span class="svglabel">Spectrum Display</span></ion-button>
                 </ion-col>
             </ion-row>
             <div>
