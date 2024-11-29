@@ -1,8 +1,8 @@
 import CADAMenu from "../views/cada/CADAMenu.vue"
 import CADAGeneral from "../views/cada/CADAGeneral.vue";
-import CADAUtilities from "./CADAUtilities.vue";
+import CADAUtilities from "../views/cada/CADAUtilities.vue";
 import UploadPackage from "../views/cada/UploadPackage.vue";
-import CADADeviceInformation from "./CADADeviceInformation.vue";
+import CADADeviceInformation from "../views/cada/CADADeviceInformation.vue";
 
 const basePath = "/cada";
 

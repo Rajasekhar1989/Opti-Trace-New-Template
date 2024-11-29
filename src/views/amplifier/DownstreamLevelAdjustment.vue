@@ -132,12 +132,12 @@
       };
     },
     mounted() {
-      eventBus().emitter.on("evtbackDownstreamLevelAdjustment",()=>{
-        this.$router.push("../amplifier/upstreaminputattenuationsettingmanual");
+      eventBus().emitter.on("evtcontinueDownstreamLevelAdjustment",()=>{
+        this.$router.push("/amplifier/upstreaminputattenuationsettingmanual");
       });
     },
     unmounted() {
-      eventBus().emitter.off("evtbackDownstreamLevelAdjustment");
+      eventBus().emitter.off("evtcontinueDownstreamLevelAdjustment");
     },
   };
   </script>

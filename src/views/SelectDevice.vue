@@ -55,7 +55,7 @@ export default {
       this.$router.push("/amplifier/connectionestablished");
     },
     navcadamanagement: function(){
-      this.$router.push("../cada/cadamenu");      
+      this.$router.push("/cada/cadamenu");      
     }
   },
 };

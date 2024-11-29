@@ -71,12 +71,12 @@
       };
     },
     mounted() {
-      eventBus().emitter.on("evtbackConfigureGainTiltFrequencies",()=>{
-        this.$router.push("../amplifier/downstreamleveladjustment");
+      eventBus().emitter.on("evtcontinueConfigureGainTiltFrequencies",()=>{
+        this.$router.push("/amplifier/downstreamleveladjustment");
       });
     },
     unmounted() {
-      eventBus().emitter.off("evtbackConfigureGainTiltFrequencies");
+      eventBus().emitter.off("evtcontinueConfigureGainTiltFrequencies");
     },
   };
   </script>

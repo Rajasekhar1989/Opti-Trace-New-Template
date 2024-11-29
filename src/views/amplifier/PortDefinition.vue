@@ -56,7 +56,7 @@
     },
     mounted() {
       eventBus().emitter.on("evtbackPortDefinition",()=>{
-        this.$router.push("../amplifier/downstreamlevelselection");
+        this.$router.push("/amplifier/downstreamlevelselection");
       });
     },
     unmounted() {

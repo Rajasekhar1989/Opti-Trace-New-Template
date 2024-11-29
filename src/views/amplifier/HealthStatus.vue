@@ -149,7 +149,7 @@ export default {
       this.$router.push("/amplifier/thresholdconfig");
     },
     navDeviceconfig: function(){
-      this.$router.push("../amplifier/deviceconfiguration");     
+      this.$router.push("/amplifier/deviceconfiguration");     
     },
   }
 }

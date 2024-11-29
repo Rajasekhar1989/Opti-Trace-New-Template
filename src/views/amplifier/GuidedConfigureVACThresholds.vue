@@ -60,12 +60,12 @@
       };
     },
     mounted() {
-      eventBus().emitter.on("evtbackGuidedConfigureVACThresholds",()=>{
-        this.$router.push("../amplifier/guidedsetuppilotsetup");
+      eventBus().emitter.on("evtcontinueGuidedConfigureVACThresholds",()=>{
+        this.$router.push("/amplifier/guidedsetuppilotsetup");
       });
     },
     unmounted() {
-      eventBus().emitter.off("evtbackGuidedConfigureVACThresholds");
+      eventBus().emitter.off("evtcontinueGuidedConfigureVACThresholds");
     },
   };
   </script>

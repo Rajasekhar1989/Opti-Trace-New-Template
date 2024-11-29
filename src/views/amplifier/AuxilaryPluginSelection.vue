@@ -35,7 +35,7 @@
     },
     mounted() {
       eventBus().emitter.on("evtbackAuxilaryPluginSelection",()=>{
-        this.$router.push("../amplifier/portdefinition");
+        this.$router.push("/amplifier/portdefinition");
       });
     },
     unmounted() {

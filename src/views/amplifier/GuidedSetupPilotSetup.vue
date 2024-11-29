@@ -71,12 +71,12 @@
       };
     },
     mounted() {
-      eventBus().emitter.on("evtbackGuidedSetupPilotSetup",()=>{
-        this.$router.push("../amplifier/gaintiltfreq");
+      eventBus().emitter.on("evtcontinueGuidedSetupPilotSetup",()=>{
+        this.$router.push("/amplifier/gaintiltfreq");
       });
     },
     unmounted() {
-      eventBus().emitter.off("evtbackGuidedSetupPilotSetup");
+      eventBus().emitter.off("evtcontinueGuidedSetupPilotSetup");
     },
   };
   </script>

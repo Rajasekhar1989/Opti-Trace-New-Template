@@ -18,8 +18,7 @@
   </template>
   
   <script>
-  import { useRouter } from "vue-router";     
-  import eventBus from '../../assets/script/eventBus';     
+  import { useRouter } from "vue-router";      
   export default {
     name: "GuidedConfigfile",   
     data(){
@@ -32,20 +31,12 @@
         router,
       };
     },    
-    mounted() {
-      eventBus().emitter.on("evtbackTrunkLevelDetailView",()=>{
-        this.$router.push("../amplifier/trunkleveldetailview");
-      });
-    },
-    unmounted() {
-      eventBus().emitter.off("evtbackTrunkLevelDetailView");
-    },
     methods:{
         navconfigVAC: function(){
-            this.$router.push("../amplifier/guidedconfigurevacthresholds");
+            this.$router.push("/amplifier/guidedconfigurevacthresholds");
         },
         navguidedProfiles: function(){
-          this.$router.push("../amplifier/guidedprofilesinfo");
+          this.$router.push("/amplifier/guidedprofilesinfo");
         }
 
     }

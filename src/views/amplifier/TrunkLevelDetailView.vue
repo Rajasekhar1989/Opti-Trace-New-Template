@@ -39,12 +39,12 @@
         SpinControl
     },
     mounted() {
-      eventBus().emitter.on("evtbackTrunkLevelDetailView",()=>{
-        this.$router.push("../amplifier/guidedconfigfile");
+      eventBus().emitter.on("evtcontinueTrunkLevelDetailView",()=>{
+        this.$router.push("/amplifier/guidedconfigfile");
       });
     },
     unmounted() {
-      eventBus().emitter.off("evtbackTrunkLevelDetailView");
+      eventBus().emitter.off("evtcontinueTrunkLevelDetailView");
     },
     
   };

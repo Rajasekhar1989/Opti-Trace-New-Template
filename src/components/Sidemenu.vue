@@ -42,15 +42,26 @@
 	</ion-menu>
 </template>
 <script>
+import { ConfirmationMsg } from '../assets/script/common';
+import eventBus from '../assets/script/eventBus';
+
 export default {
   name: "SideMenu",
-  methods: {
-    btnLogout: function () {
+  mounted() {
+	eventBus().emitter.on("evtconfyeslogoutselectdevice",()=>{
       localStorage.removeItem("isLogin");
       this.$router.push("/login");
       setTimeout(() => {
         window.location.reload();
       }, 300);
+	});
+  },
+  unmounted() {
+	eventBus().emitter.off("evtconfyeslogoutselectdevice");
+  },
+  methods: {
+    btnLogout: function () {
+		ConfirmationMsg("Are you sure you want to logout?", "logout");
     },
   },
 };

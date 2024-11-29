@@ -38,7 +38,7 @@
     },
     methods:{
       navingresscontrolswitch : function(){
-        this.$router.push("../amplifier/ingresscontrolswitch");      
+        this.$router.push("/amplifier/ingresscontrolswitch");      
       }
     }
   };

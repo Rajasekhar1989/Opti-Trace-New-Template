@@ -35,12 +35,12 @@
       };
     },
     mounted() {
-      eventBus().emitter.on("evtbackGuidedSetup",()=>{
-        this.$router.push("../amplifier/downstreamlevelselection");
+      eventBus().emitter.on("evtcontinueGuidedSetup",()=>{
+        this.$router.push("/amplifier/downstreamlevelselection");
       });
     },
     unmounted() {
-      eventBus().emitter.off("evtbackGuidedSetup");
+      eventBus().emitter.off("evtcontinueGuidedSetup");
     },
     
   };

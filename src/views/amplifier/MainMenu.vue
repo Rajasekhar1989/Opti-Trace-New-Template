@@ -95,28 +95,28 @@ export default {
   },  
   methods:{
     navHealthstatus:function(){
-      this.$router.push("../amplifier/healthstatus");
+      this.$router.push("/amplifier/healthstatus");
     },
     navDeviceconfig: function(){
-      this.$router.push("../amplifier/deviceconfiguration");     
+      this.$router.push("/amplifier/deviceconfiguration");     
     },
     navdownstreamconfig: function(){      
-      this.$router.push("../amplifier/downstreamconfiguration");      
+      this.$router.push("/amplifier/downstreamconfiguration");      
     },
     navupstreamconfig: function(){
-      this.$router.push("../amplifier/upstreamconfiguration");      
+      this.$router.push("/amplifier/upstreamconfiguration");      
     },
     navadvanceddiagnostics: function(){      
-      this.$router.push("../amplifier/advanceddiagnostics");      
+      this.$router.push("/amplifier/advanceddiagnostics");      
     },
     navutilities: function(){      
-      this.$router.push("../amplifier/utilitiesmenu");              
+      this.$router.push("/amplifier/utilitiesmenu");              
     },
     navprofiles: function(){      
-      this.$router.push("../amplifier/profilesinfo");                    
+      this.$router.push("/amplifier/profilesinfo");                    
     },
     navspectrumdisplay: function(){
-      this.$router.push("../amplifier/spectrumdisplay");
+      this.$router.push("/amplifier/spectrumdisplay");
     }
   }
 }

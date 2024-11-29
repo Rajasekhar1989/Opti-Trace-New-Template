@@ -40,6 +40,7 @@
     
     <script>
     import { useRouter } from "vue-router";   
+import { ConfirmationMsg } from "../../assets/script/common";
     
     export default {
       name: "CADAGeneral",
@@ -62,7 +63,10 @@
           this.$router.push("../cada/uploadpackage");
         },
         navcadareboot: function(){
-          this.$router.push("../cada/deviceinformation");
+          ConfirmationMsg("Are you sure you want to reboot?", "reboot");
+        },
+        btnReboot: function() {
+          
         }
       }
     };

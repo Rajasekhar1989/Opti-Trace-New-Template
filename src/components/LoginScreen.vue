@@ -13,7 +13,13 @@
                         <ion-row>
                             <ion-col size-lg="6" size-sm="12" size="12">
                                 <div class="custominput">                                    
-                                    <ion-input label-placement="stacked" placeholder="Enter Name" required mode="ios">
+                                    <ion-input 
+                                        label-placement="stacked" 
+                                        v-model="txtUsername" 
+                                        placeholder="Enter Name" 
+                                        required 
+                                        mode="ios"
+                                        @keydown="preventSpace">
                                         <div slot="label">User Name <ion-text color="danger">*</ion-text></div>
                                     </ion-input>   
                                     <span class="input-icon" v-html="$store.state.user"></span>
@@ -21,12 +27,18 @@
                             </ion-col>                           
                             <ion-col size-lg="6" size-sm="12" size="12">
                                 <div class="custominput">                                    
-                                    <ion-input label-placement="stacked" type="password" placeholder="******" required mode="ios">
+                                    <ion-input 
+                                        label-placement="stacked" 
+                                        v-model="txtPassword" 
+                                        type="password" 
+                                        placeholder="******" 
+                                        required 
+                                        mode="ios"
+                                        @keydown="preventSpace">
                                         <div slot="label">Password <ion-text color="danger">*</ion-text></div>
                                     </ion-input>   
                                     <span class="input-icon" v-html="$store.state.lock"></span>
                                 </div>                                
-                                
                             </ion-col>
                         </ion-row>
                     </form>
@@ -42,29 +54,46 @@
     </ion-page>  
   </template>
   
-  <script>
-  import { useRouter } from 'vue-router';
-  import eventBus from '../assets/script/eventBus';
+<script>
+import { useRouter } from "vue-router";
+import eventBus from "../assets/script/eventBus";
+import { InformationMsg } from "../assets/script/common";
 
-  export default {
-    name: "LoginScreen",
-    setup() {
-      const router = useRouter();
-      return {
-        router,
-      };
-    },
-    methods: {
-      btnLogin: function() {
-        localStorage.setItem("isLogin", "suresh");
-        this.$router.push("/amplifier/selectdevice");
-        setTimeout(() => {
-          window.location.reload();
-        }, 300);
-      },
-      btnBack: function() {
-          eventBus().emitter.emit("evtbtnback");
+export default {
+  name: "LoginScreen",
+  data() {
+    return {
+      txtUsername: "",
+      txtPassword: "",
+    };
+  },
+  setup() {
+    const router = useRouter();
+    return {
+      router,
+    };
+  },
+  methods: {
+    preventSpace(event) {
+      if (event.key === " ") {
+        event.preventDefault();
       }
-    }
-  }
-  </script>
+    },
+    btnLogin: function () {
+      if (this.txtUsername == "" || this.txtPassword == "") {
+        let errMsg = (this.txtUsername == "") ? "Please enter username." : "Please enter password.";
+        InformationMsg(errMsg, "login");
+        return;
+      }
+      localStorage.setItem("isLogin", "suresh");
+      this.$router.push("/amplifier/selectdevice");
+      setTimeout(() => {
+        window.location.reload();
+      }, 300);
+    },
+    btnBack: function () {
+      eventBus().emitter.emit("evtbtnback");
+    },
+  },
+};
+</script>

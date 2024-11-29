@@ -56,13 +56,13 @@
     },
     methods:{
       navfirmwareupgrade: function(){
-        this.$router.push("../amplifier/firmwareupgrade");
+        this.$router.push("/amplifier/firmwareupgrade");
       },
       navtestmode: function(){
-        this.$router.push("../amplifier/testmode");
+        this.$router.push("/amplifier/testmode");
       },
       navdeviceinformation: function(){
-        this.$router.push("../amplifier/deviceinformation");
+        this.$router.push("/amplifier/deviceinformation");
       }
     }
   };

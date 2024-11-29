@@ -1,19 +1,17 @@
 import store from "../../store";
 import { alertController } from '@ionic/vue';
-import router from "../../router/index";
 import eventBus from "./eventBus";
 
-/* Global variable */
-var getRouterPath = router.currentRoute.value.name;
-
-
-
+export function getCurrentPath() {
+	let path = window.location.pathname.split("/");
+	return path[2];
+}
 
 /*	Information Message:
 	-------------------
-	message 		: 	Message to be displayed.
-	fireEvtname 	: 	Event name to be fired.
-	routepath		:	Current router path.
+	- message      : The message to be displayed in the information dialog.
+	- fireEvtname  : The name of the event to be triggered upon information.
+	- routepath    : The current router path where the information is being invoked.
 */
 export const InformationMsg = async (message, fireEvtname) => {
   const alert = await alertController.create({
@@ -22,9 +20,7 @@ export const InformationMsg = async (message, fireEvtname) => {
       {
         text: "OK",
         handler: () => {
-          let evtname = "evtinfomsg" + fireEvtname +  getRouterPath ;
-          console.log(getRouterPath);
-
+          let evtname = "evtinfomsg" + fireEvtname +  getCurrentPath() ;
           console.log("Information Event : ", evtname);
           eventBus().emitter.emit(evtname);
         },
@@ -37,6 +33,34 @@ export const InformationMsg = async (message, fireEvtname) => {
 };
 
 
+/*	Confirmation Message:
+	-------------------
+	- message      : The message to be displayed in the confirmation dialog.
+	- fireEvtname  : The name of the event to be triggered upon confirmation.
+	- routepath    : The current router path where the confirmation is being invoked.
+*/
+export async function ConfirmationMsg(message, evtName) {
+    const alert = await alertController.create({
+        message: message,
+        buttons: [            
+            {
+                text: 'No',
+                handler: () => {
+					console.log("Confirmation Event : ", "evtconfno" + evtName +  getCurrentPath());
+					eventBus().emitter.emit("evtconfno" + evtName + getCurrentPath());
+                }
+            },
+			{
+                text: 'Yes',
+                handler: () => {	
+					console.log("Confirmation Event : ", "evtconfyes" + evtName + getCurrentPath());					
+					eventBus().emitter.emit("evtconfyes" + evtName + getCurrentPath());
+                }
+            },
+        ]
+    });
+    await alert.present();
+}
 
 export function genDateTimeID () {		
 	var date_now;

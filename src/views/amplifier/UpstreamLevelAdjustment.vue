@@ -76,12 +76,12 @@
       };
     },
     mounted() {
-      eventBus().emitter.on("evtbackUpstreamLevelAdjustment",()=>{
-        this.$router.push("../amplifier/guidedamplifiermode");
+      eventBus().emitter.on("evtcontinueUpstreamLevelAdjustment",()=>{
+        this.$router.push("/amplifier/guidedamplifiermode");
       });
     },
     unmounted() {
-      eventBus().emitter.off("evtbackUpstreamLevelAdjustment");
+      eventBus().emitter.off("evtcontinueUpstreamLevelAdjustment");
     },
   };
   </script>

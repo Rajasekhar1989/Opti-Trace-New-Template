@@ -82,26 +82,33 @@
                 <SpinControl />
             </div>
         </ion-content>
-        </ion-page>
-      </template>
-      
+    </ion-page>
+</template>
 <script>
-import { useRouter } from "vue-router";  
+import { useRouter } from "vue-router";
 import SpinControl from "../../components/SpinControl.vue";
+import eventBus from "../../assets/script/eventBus";
 export default {
-name: "GuidedProfilesInfo",   
-data(){
-    return{             
-    }        
-    },          
-setup() {
-    const router = useRouter();      
-    return {       
-    router,
+  name: "GuidedProfilesInfo",
+  data() {
+    return {};
+  },
+  setup() {
+    const router = useRouter();
+    return {
+      router,
     };
-},
-components:{
-    SpinControl
-}
+  },
+  mounted() {
+    eventBus().emitter.on("evtcontinueGuidedProfilesInfo",()=>{
+        this.$router.push("/amplifier/downstreamleveladjustment");
+    });
+  },
+  unmounted() {
+    eventBus().emitter.off("evtcontinueGuidedProfilesInfo");
+  },
+  components: {
+    SpinControl,
+  },
 };
 </script>
