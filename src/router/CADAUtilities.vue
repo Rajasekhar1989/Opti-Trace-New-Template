@@ -4,20 +4,11 @@
       <div class="middlearea">
        <div class="card">
           <ion-list class="devicelist menu" mode="ios">
-            <ion-item @click="navcadageneral">
+            <ion-item @click="navcadadeviceinfo">
               <ion-label>
                 <div>
-                  <span class="device-icon sm" v-html="$store.state.layers"></span>
-                  <span class="device-name">General</span>
-                  <span class="angle-icon" v-html="$store.state.angleright"></span>            
-                </div>                    
-              </ion-label>
-            </ion-item>
-            <ion-item @click="navwifisettings">
-              <ion-label>
-                <div>
-                  <span class="device-icon sm" v-html="$store.state.wifi"></span>
-                  <span class="device-name">Wi-Fi Settings</span>
+                  <span class="device-icon sm" v-html="$store.state.deviceinfo"></span>
+                  <span class="device-name">Device Information</span>
                   <span class="angle-icon" v-html="$store.state.angleright"></span>            
                 </div>                    
               </ion-label>
@@ -33,7 +24,7 @@
     import { useRouter } from "vue-router";   
     
     export default {
-      name: "CADAMenu",
+      name: "CADAUtilities",
       data(){
           return{
             
@@ -46,12 +37,9 @@
         };
       },
       methods:{      
-        navcadageneral: function(){
-          this.$router.push("../cada/cadageneral");
-        },
-        navwifisettings: function(){
-          this.$router.push("../cada/wifisettings");
-        }
+        navcadadeviceinfo: function(){
+          this.$router.push("../cada/cadadeviceinformation");
+        }       
       }
     };
     </script>

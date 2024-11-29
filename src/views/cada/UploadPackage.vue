@@ -1,16 +1,15 @@
 <template>  
 <ion-page>
   <ion-content class="ion-padding main-content">
-    
-    <div class="card auto">     
-      <h5 class="cardtitle mb-15">Firmware Upgade</h5>
-      <h6 class="subtitle">Current Package Version: 4.24</h6>         
+    <h5 class="cardtitle mb-15">Upgrade Package</h5>
+    <div class="card auto">
+        <h6 class="subtitle">Current Package Version: 24.01.01</h6>       
       <div class="upgrade">
         <ion-input type="file"></ion-input>
 
         <div class="center">
             <span class="svgicon" v-html="$store.state.upload"></span>
-            <p>Select Firmware File...</p>            
+            <p>Select Package here...</p>            
         </div>
       </div>
       <p class="mt-10">Only support .dfu, .zip files</p>      
@@ -34,7 +33,7 @@
   import { useRouter } from "vue-router";   
   import { ref } from 'vue';  
   export default {
-    name: "FirmwareUpgrade",   
+    name: "UploadPackage",   
     data(){
         return{    
           progress : 50,   
