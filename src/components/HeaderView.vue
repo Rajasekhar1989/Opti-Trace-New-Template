@@ -18,7 +18,7 @@
         <!-- <ion-title mode="ios">Device Configuration <span>Device config</span>
           <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
         </ion-title> -->
-        <ion-title mode="ios">Downstream Configuration <span>Downstream config</span>
+        <ion-title mode="ios">{{ getHeaderTitle }}<span></span>
           <span class="connected-device"> <em v-html="$store.state.wifi"></em> MB180.25356 </span>
         </ion-title>
 
@@ -41,6 +41,36 @@ export default {
     return {        
       router,
     };
+  },
+  computed: {
+    getHeaderTitle() {
+      let path = this.$route.path.split("/")[2];
+      let pathArr = {
+        "selectdevice" : "Select Device",
+        "connectionestablished" : "Connection Established",
+        "mainmenu" : "Main Menu",
+        "healthstatus" : "Health Status",
+        "thresholdconfig" : "Health Status",
+        "deviceconfiguration" : "Device Configuration", 
+        "downstreamconfiguration" : "Downstream Configuration",
+        "upstreamconfiguration" : "Upstream Configuration",
+        "advanceddiagnostics" : "Advanced Diagnostics",
+        "ingresscontrolswitch" : "Ingress Control Switch",
+        "utilitiesmenu" : "Utilities Menu",
+        "deviceinformation" : "Device Information",
+        "firmwareupgrade" : "Firmware Upgrade",
+        "testmode" : "Test Mode",
+        "profilesinfo" : "Profiles Info",
+        "spectrumdisplay" : "Spectrum Display",
+        ...Object.fromEntries([
+          "guidedsetup", "downstreamlevelselection", "trunkleveldetailview", "guidedconfigfile", 
+          "guidedconfigurevacthresholds", "guidedsetuppilotsetup", "guidedamplifieroffset", 
+          "gaintiltfreq", "downstreamleveladjustment", "upstreaminputattenuationsettingmanual", 
+          "guidedamplifiermode", "guidedprofilesinfo"
+        ].map(key => [key, "Guided Setup"]))
+      };
+      return pathArr[path];
+    }
   },
   methods:{
     navHome: function(){
