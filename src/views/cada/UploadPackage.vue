@@ -1,7 +1,7 @@
 <template>
 	<ion-page>
 		<ion-content class="ion-padding main-content">
-			<h5 class="cardtitle mb-15">Upgrade Package</h5>
+			<!-- <h5 class="cardtitle mb-15">Upgrade Package</h5> -->
 			<div class="card auto">
 				<h6 class="subtitle">Current Package Version: 24.01.01</h6>
 				<div class="upgrade">
@@ -17,7 +17,7 @@
 				<h5 class="cardtitle mb-10">Status</h5>
 				<div class="card auto">
 					<div class="upgrade_status"> <span class="label">Upgrading...</span> <em class="infostatus">65%  • 30 seconds remaining</em>
-						<ion-progress-bar :value="progress"></ion-progress-bar>
+						<ion-progress-bar :value="progress" mode="ios"></ion-progress-bar>
 					</div>
 				</div>
 			</div>

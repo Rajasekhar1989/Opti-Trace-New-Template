@@ -62,6 +62,12 @@ export default {
         "testmode" : "Test Mode",
         "profilesinfo" : "Profiles Info",
         "spectrumdisplay" : "Spectrum Display",
+
+        "cadamenu": "CADA Menu",
+        "cadageneral" : "General",
+        "cadautilities" : "Utilities",
+        "cadadeviceinformation" : "Utilities",
+        "uploadpackage" : "Upgrade Package",
         ...Object.fromEntries([
           "guidedsetup", "downstreamlevelselection", "trunkleveldetailview", "guidedconfigfile", 
           "guidedconfigurevacthresholds", "guidedsetuppilotsetup", "guidedamplifieroffset", 

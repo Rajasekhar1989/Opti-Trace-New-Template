@@ -4,13 +4,13 @@
     <div class="card auto">
         <h5 class="cardtitle">Auxiliary Plug-in Selected</h5>
         <div class="customradio full">
-            <ion-radio-group value="jmp">
+            <ion-radio-group value="jmp" mode="ios">
                 <ion-radio value="jmp">JMP</ion-radio>
             </ion-radio-group>
         </div>
         <h5 class="cardtitle">Select Port 3 Definition</h5>
         <div class="customradio">
-            <ion-radio-group value="tap">               
+            <ion-radio-group value="tap" mode="ios">               
                 <ion-row class="ion-justify-content-between">
                     <ion-col size-sm="4" size="5">
                         <ion-radio value="through">Through</ion-radio>
@@ -23,7 +23,7 @@
         </div>
         <h5 class="cardtitle">Select Port 4 Definition</h5>
         <div class="customradio full">
-            <ion-radio-group value="through">  
+            <ion-radio-group value="through" mode="ios">  
                 <ion-row class="ion-justify-content-between">
                     <ion-col size-sm="4" size="5">
                         <ion-radio value="through">Through</ion-radio>

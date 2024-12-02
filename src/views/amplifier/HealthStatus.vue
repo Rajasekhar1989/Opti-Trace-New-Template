@@ -11,7 +11,7 @@
               <ion-col size="9" size-sm="11">
                 <div class="custominput addnav">
                   <div style="padding-left:38px;">
-                    <ion-input label-placement="stacked" placeholder="119.7">                    
+                    <ion-input label-placement="stacked" placeholder="119.7" readonly>                    
                       <div slot="label">VAC (V)</div>
                     </ion-input> 
                   </div>                  
@@ -20,7 +20,7 @@
                 </div>
               </ion-col>
               <ion-col size="3" size-sm="1" class="center">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
               </ion-col>
             </ion-row>
         
@@ -29,7 +29,7 @@
               <ion-col size="9" size-sm="11">
                 <div class="custominput addnav">
                   <div style="padding-left:38px;">
-                    <ion-input label-placement="stacked" placeholder="10.2">                    
+                    <ion-input label-placement="stacked" placeholder="10.2" readonly>                    
                       <div slot="label">24 VDC (V)</div>
                     </ion-input> 
                   </div>                  
@@ -37,7 +37,7 @@
                 </div>
               </ion-col>
               <ion-col size="3" size-sm="1" class="center">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
               </ion-col>
             </ion-row>
    
@@ -46,7 +46,7 @@
               <ion-col size="9" size-sm="11">
                 <div class="custominput addnav">
                   <div style="padding-left:38px;">
-                    <ion-input label-placement="stacked" placeholder="4.0">                    
+                    <ion-input label-placement="stacked" placeholder="4.0" readonly>                    
                       <div slot="label">5 VDC (V)</div>
                     </ion-input> 
                   </div>                  
@@ -54,7 +54,7 @@
                 </div>
               </ion-col>
               <ion-col size="3" size-sm="1" class="center">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
               </ion-col>
             </ion-row>
          
@@ -62,7 +62,7 @@
               <ion-col size="9" size-sm="11">
                 <div class="custominput addnav">
                   <div style="padding-left:38px;">
-                    <ion-input label-placement="stacked" placeholder="4.0">                    
+                    <ion-input label-placement="stacked" placeholder="4.0" readonly>                    
                       <div slot="label">8 VDC (V)</div>
                     </ion-input> 
                   </div>                  
@@ -70,7 +70,7 @@
                 </div>
               </ion-col>
               <ion-col size="3" size-sm="1" class="center">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
               </ion-col>
             </ion-row>
          
@@ -78,7 +78,7 @@
               <ion-col size="9" size-sm="11">
                 <div class="custominput addnav">
                   <div style="padding-left:38px;">
-                    <ion-input label-placement="stacked" placeholder="2.0">                    
+                    <ion-input label-placement="stacked" placeholder="2.0" readonly>                    
                       <div slot="label">Temperature (°C)</div>
                     </ion-input> 
                   </div>                  
@@ -86,7 +86,7 @@
                 </div>
               </ion-col>
               <ion-col size="3" size-sm="1" class="center">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
               </ion-col>
             </ion-row>
         
@@ -94,7 +94,7 @@
               <ion-col size="9" size-sm="11">
                 <div class="custominput addnav">
                   <div style="padding-left:38px;">
-                    <ion-input label-placement="stacked" placeholder="COMM Error">                    
+                    <ion-input label-placement="stacked" placeholder="COMM Error" readonly>                    
                       <div slot="label">SMU</div>
                     </ion-input> 
                   </div>                  
@@ -102,7 +102,7 @@
                 </div>
               </ion-col>
               <ion-col size="3" size-sm="1" class="center">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
               </ion-col>
             </ion-row>
         
@@ -110,7 +110,7 @@
               <ion-col size="9" size-sm="11">
                 <div class="custominput addnav">
                   <div style="padding-left:38px;">
-                    <ion-input label-placement="stacked" placeholder="204/258">                    
+                    <ion-input label-placement="stacked" placeholder="204/258" readonly>                    
                       <div slot="label">RPF ( MHz )</div>
                     </ion-input> 
                   </div>                  
@@ -118,7 +118,7 @@
                 </div>
               </ion-col>
               <ion-col size="3" size-sm="1" class="center">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
               </ion-col>
             </ion-row>
          

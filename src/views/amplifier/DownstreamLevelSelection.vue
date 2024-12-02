@@ -4,7 +4,7 @@
     <div class="card auto">
         <h5 class="cardtitle">Downstream Levels</h5>  
         <div class="customradio full">
-            <ion-radio-group value="trunk">                                             
+            <ion-radio-group value="trunk" mode="ios">                                             
                 <ion-radio value="standard">Standard</ion-radio>        
                 <ion-radio value="trunk">Trunk</ion-radio>        
             </ion-radio-group>

@@ -6,7 +6,7 @@
         <h6 class="subtitle mt-10">Port 2</h6>
 
         <div class="customradio">
-            <ion-radio-group value="6db">                
+            <ion-radio-group value="6db" mode="ios">                
                 <ion-row>
                     <ion-col size="6">
                         <ion-radio value="6db">6 dB</ion-radio><br />
@@ -24,7 +24,7 @@
         <h6 class="subtitle">Select Port 3 / 4</h6>
 
         <div class="customradio">
-            <ion-radio-group value="6db">                
+            <ion-radio-group value="6db" mode="ios">                
                 <ion-row>
                     <ion-col size="6">
                         <ion-radio value="0db">0 dB</ion-radio><br />

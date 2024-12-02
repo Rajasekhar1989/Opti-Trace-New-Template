@@ -5,7 +5,7 @@
         <h5 class="cardtitle">Select Auxilary Plug-in</h5>
 
         <div class="customradio full">
-            <ion-radio-group value="jmp">                            
+            <ion-radio-group value="jmp" mode="ios">                            
                 <ion-radio value="jmp">JMP</ion-radio>            
                 <ion-radio value="2way">2-Way</ion-radio>            
                 <ion-radio value="dc08">DC-08</ion-radio>

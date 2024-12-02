@@ -85,7 +85,7 @@
                     <div class="modalInfo">
                         <p class="mt-0">Update Setup Configuration, Gain and Tilt Settings by changing from Manual to AGC Mode.</p>
                     </div>                        
-                    <div class="setBtn center">
+                    <div class="modalBtns flex-box justify-center">
                         <ion-button class="btnprimary" mode="ios" @click="closeModal">OK</ion-button>                    
                     </div>
                 </div>

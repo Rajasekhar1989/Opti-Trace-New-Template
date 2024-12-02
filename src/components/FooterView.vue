@@ -18,10 +18,13 @@
             <div class="modalInfo">
               <p class="mt-0">Update Setup Configuration, Gain and Tilt Settings by changing from Manual to AGC Mode.</p>
             </div>                        
-            <div class="setBtn center">
-              <ion-button class="btnprimary" mode="ios" @click="btnClick('discard')">Disacard & Exit</ion-button>
-              <ion-button class="btnprimary" mode="ios" @click="btnClick('save')">Save & Exit</ion-button>
-              <ion-button class="btnprimary" mode="ios" @click="btnClick('cancel')">Cancel</ion-button>
+            <div class="modalBtns flex-box space-between mb-10">
+              <ion-button class="btnwarning" mode="ios" @click="btnClick('discard')">Disacard & Exit</ion-button>              
+              <ion-button class="btnsuccess" mode="ios" @click="btnClick('save')">Save & Exit</ion-button>
+              
+            </div>
+            <div class="modalBtns flex-box justify-center">
+              <ion-button class="btnerror" mode="ios" @click="btnClick('cancel')">Cancel</ion-button>              
             </div>
           </div>
         </ion-modal>

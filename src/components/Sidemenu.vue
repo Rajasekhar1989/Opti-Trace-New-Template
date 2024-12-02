@@ -49,7 +49,13 @@ export default {
   name: "SideMenu",
   mounted() {
 	eventBus().emitter.on("evtconfyeslogoutselectdevice",()=>{
-      localStorage.removeItem("isLogin");
+	  Object.keys(localStorage).forEach(itemId => {  
+            if (!itemId.startsWith("uploadProfile")) {
+                localStorage.removeItem(itemId);
+            }
+        });
+
+
       this.$router.push("/login");
       setTimeout(() => {
         window.location.reload();

@@ -22,7 +22,7 @@
         <div class="upgrade_status">
           <span class="label">Upgrading...</span>  
           <em class="infostatus">65%  • 30 seconds remaining</em>
-          <ion-progress-bar :value="progress"></ion-progress-bar>
+          <ion-progress-bar :value="progress" mode="ios"></ion-progress-bar>
         </div>        
       </div>
     </div>

@@ -15,7 +15,7 @@
                 <h5 class="cardtitle">Continues Sweep</h5>
             </ion-col>
             <ion-col size-sm="4">
-                <ion-toggle :checked="togglechk" justify="end"></ion-toggle>
+                <ion-toggle :checked="togglechk" justify="end" mode="ios"></ion-toggle>
             </ion-col>
         </ion-row>
     </div>       

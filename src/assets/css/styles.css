@@ -26,8 +26,6 @@
   text-decoration: none;
 }
 
-
-
 :root{
   --black:#000000;
   --white:#ffffff;
@@ -101,7 +99,8 @@ table{
   border: 1px solid #ccc;
   margin: 10px 0 15px;
 }
-table tr th{ background-color: #d6e8fd.devicelist ion-label svg;font-weight: 500; font-size: 18px;padding:2px 5px}
+table tr th{ background-color: #d6e8fd}
+.devicelist ion-label svg{font-weight: 500; font-size: 18px;padding:2px 5px; padding: 0;width: 19px;height: 19px;}
 table tr td{ border:1px solid #c2c2c2; font-size: 15px;padding:2px 5px}
 table tr td:first-child{text-align: left;}
 table.align-left tr td{text-align: left;}
@@ -184,7 +183,7 @@ ion-progress-bar::part(progress){background-color: var(--themecolor);}
 ion-button{
   min-height: 30px;
   width: 100%;
-  font-size: 20px;  
+  font-size: 18px;  
   margin: 0;
   text-transform: unset;
 }
@@ -242,6 +241,12 @@ background: linear-gradient(180deg, rgba(114,180,237,1) 0%, rgba(14,98,171,1) 10
   background: linear-gradient(180deg, rgba(209, 239, 160,1) 0%, rgba(103,163,8,1) 54%);
   --background-focused:linear-gradient(180deg, rgba(209, 239, 160,1) 0%, rgba(103,163,8,1) 54%);
   --background-activated: linear-gradient(270deg, rgba(209, 239, 160,1) 0%, rgba(103,163,8,1) 54%);
+}
+.btnwarning::part(native){
+  background-color: #F97B2D;
+  background: linear-gradient(180deg, rgb(255, 209, 118) 0%, rgba(249,123,49,1) 54%);
+  --background-focused:linear-gradient(180deg, rgba(255, 209, 118,1) 0%, rgba(249,123,49,1) 54%);
+  --background-activated: linear-gradient(270deg, rgba(255, 209, 118,1) 0%, rgba(249,123,49,1) 54%);
 }
 
 .setBtn .btnerror::part(native), .setBtn .btnprimary{min-width:90px; height: 30px; width: auto;}
@@ -321,6 +326,8 @@ ion-segment.three ion-segment-button::part(native){padding-inline-start: 13px;}
 
 ion-input{text-align: left;min-height: 45px;border-bottom: 1px solid var(--paragraphcolor);--highlight-color: rgba(14,98,171,1);}
 ion-input label input.native-input.sc-ion-input-ios{font-size: 22px;}
+ion-input.no-border{border: none;}
+ion-input.no-border.has-focus input{caret-color:transparent;}
 
 .custominput{ position: relative;}
 .custominput.addnav span svg{ width: 30px; height: 30px; }
@@ -351,7 +358,7 @@ ion-select::part(container){display: block;text-align: left; font-size: 22px; --
 .main-header ion-toolbar{--min-height:60px; --background: rgb(237, 247, 255);background: rgb(237, 247, 255);}
 .main-header .toolbar-title-default:last-of-type{--border-width:0px !important; padding-top: 10px;padding-bottom: 10px;}
 .main-header .header-background{-webkit-backdrop-filter:unset; backdrop-filter:unset;}
-ion-menu-button{ padding-top: 4px;}
+ion-menu-button{ padding-top: 4px;padding-left: 5px;}
 .main-header ion-title{padding-inline-start: 55px;}
 
 .sidemenuWrapper{ padding: 15px;}
@@ -377,13 +384,13 @@ ion-title{ font-weight: 500;font-size: 24px; color: var(--headingcolor); padding
 ion-title span{ display: block; font-size: 16px; color: var(--paragraphcolor);}
 ion-title span svg{ width: 20px; height: 20px; position: relative; top: 1px;}
 ion-menu ion-content::part(background){background-color: #e5f3ff;}
-ion-menu-button span svg{ width: 32px;height: 28px;}
+ion-menu-button span svg{ width: 30px;height: 28px;}
 ion-title .connected-device{color:#fff;background: rgb(14,98,171);background: linear-gradient(90deg, rgba(14,98,171,1) 0%, rgba(0,115,215,1) 50%, rgba(0,87,163,1) 100%);display: inline-block;
 border-radius: 8px;padding: 4px 8px 1px 8px;font-size: 20px;}
 ion-title .connected-device em{ fill: #ffffff; }
 
 /* ion-footer{} */
-ion-footer ion-toolbar{--padding-top: 10px;--padding-start: 15px;--padding-end: 15px;--background:transparent; }
+ion-footer ion-toolbar{--padding-top: 10px;--padding-start: 15px;--padding-end: 15px;--padding-start: 5px;--background:transparent;background: rgba(177, 216, 251, 1); }
 ion-footer.footer-toolbar-padding ion-toolbar:last-of-type{ padding-bottom: 10px;}
 ion-footer.footer-toolbar-padding ion-toolbar:first-of-type{ --border-width: 0;background: rgba(177, 216, 251, 1);}
 .flex-footer{display: flex; gap: 20px;}
@@ -396,7 +403,7 @@ ion-footer.footer-toolbar-padding ion-toolbar:first-of-type{ --border-width: 0;b
 .devicelist ion-item:last-child{ margin-bottom: 0;}
 .devicelist ion-item ion-label{padding:10px;font-size: 20px !important;margin-right: 0; position: relative; margin: 0; background-color: #d7eaf9; border-radius: 10px; cursor: pointer;}
 .device-name{padding-left: 30px;}
-.devicelist ion-label svg{ width: 19px; height: 19px;}
+
 /* .devicelist ion-label .angle-icon{padding-top: 3px;} */
 .devicelist ion-label .angle-icon{float: right;padding-top: 20px;}
 .devicelist ion-label .more{ padding-left: 30px;}
@@ -470,7 +477,7 @@ ion-toggle::part(track){ height: 30px;width: 55px; position: relative;--track-ba
 
 .configbtns{ display: flex; justify-content: space-between; }
 .configbtns ion-button{max-width: 60px;}
-.configbtns ion-button::part(native){background: transparent; padding: 0;--background-activated:transparent;--background-focused:transparent}
+.configbtns ion-button::part(native){background: transparent; padding: 0;--background-activated:transparent;--background-focused:transparent; box-shadow: none;}
 .customradio.full ion-radio{ margin-bottom: 15px;}
 .customradio.full ion-radio:last-child{margin-bottom: 0;}
 
@@ -532,6 +539,14 @@ ion-modal#example-modal {
   background-color: #0E62AB;  
   border: 3px solid #77AFDF;  
 }
+.modalIcontype.error {
+  background-color: var(--errorbg);
+  border: 3px solid #FFB5B5;  
+}
+.modalIcontype.warning {
+  background-color: var(--warningbg);  
+  border: 3px solid #F1BE9D;  
+}
 .modalWrapper{
   padding: 40px 20px 15px;
 }
@@ -544,9 +559,9 @@ ion-modal#example-modal {
   font-weight: 300;  
   letter-spacing: 0.5px;  
 }
-
+.modalBtns ion-button::part(native){ padding: 10px 20px 5px;}
 .modalBtns ion-button.sm::part(native){ height: 33px; font-size: 17px; padding: 5px 15px; min-width: 90px;border-radius: 50px;
-  box-shadow: 1px 2px 5px rgba(0,0,0,0.3);padding-top: 10px;--background-focused:hsla(0, 0%, 91%, 0.162);--background-hover: hsla(0, 0%, 91%, 0.162); --background-activated:hsla(0, 0%, 91%, 0.162);}
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.3);padding-top: 10px;--background-focused:hsla(0, 0%, 91%, 0.162);--background-hover: hsla(0, 0%, 91%, 0.162); --background-activated:hsla(0, 0%, 91%, 0.162);padding: 0;}
 ion-button.success::part(native){ background-color: var(--successbg);}
 ion-button.warning::part(native){ background-color: var(--warningbg);}
 ion-button.error::part(native){ background-color: var(--errorbg);}

@@ -10,9 +10,9 @@
         </div>
         <div class="card auto">
             <div class="configbtns">
-                <ion-button><img :src="$store.state.configbtn1" alt="" /> </ion-button>
-                <ion-button><img :src="$store.state.configbtn2" alt="" /> </ion-button>
-                <ion-button><img :src="$store.state.configbtn3" alt="" /> </ion-button>
+                <ion-button mode="ios"><img :src="$store.state.configbtn1" alt="" /> </ion-button>
+                <ion-button mode="ios"><img :src="$store.state.configbtn2" alt="" /> </ion-button>
+                <ion-button mode="ios"><img :src="$store.state.configbtn3" alt="" /> </ion-button>
             </div>
             <div>
                 <table class="table">
@@ -35,9 +35,9 @@
                 </table>
             </div>
             <div class="configbtns">
-                <ion-button><img :src="$store.state.configbtn4" alt="" /> </ion-button>
-                <ion-button><img :src="$store.state.configbtn5" alt="" /> </ion-button>
-                <ion-button><img :src="$store.state.configbtn6" alt="" /> </ion-button>
+                <ion-button mode="ios"><img :src="$store.state.configbtn4" alt="" /> </ion-button>
+                <ion-button mode="ios"><img :src="$store.state.configbtn5" alt="" /> </ion-button>
+                <ion-button mode="ios"><img :src="$store.state.configbtn6" alt="" /> </ion-button>
             </div>
         </div>
         <div class="card auto">
