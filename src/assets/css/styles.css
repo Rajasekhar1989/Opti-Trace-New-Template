@@ -444,10 +444,12 @@ ion-toggle::part(track){ height: 30px;width: 55px; position: relative;--track-ba
   --background-focused:transparent;
   --background-activated:transparent;  
 }
-
+.customSpincontrol ion-button::part(native){
+  background:transparent;
+}
 .customSpincontrol::part(native) {
   padding-inline-start: 0px;
-  --inner-padding-end: 0
+  --inner-padding-end: 0;  
 }
 .customSpincontrol span.textbox{
   width: 100%;
@@ -465,7 +467,7 @@ ion-toggle::part(track){ height: 30px;width: 55px; position: relative;--track-ba
   font-weight: 500;
   border-radius: 5px;
   display: block;
-  background-color: #fff !important;
+  background-color: transparent !important;
   text-align: center;    
 }
 .customSpincontrol ion-button span{
@@ -547,21 +549,30 @@ ion-modal#example-modal {
   background-color: var(--warningbg);  
   border: 3px solid #F1BE9D;  
 }
+.modalIcontype.success {
+  background-color: var(--successbg);  
+  border: 3px solid #a6d7a7;  
+}
+.modalInfo .successmsg{
+  font-size: 26px; text-align: center; color: var(--successbg);
+}
 .modalWrapper{
   padding: 40px 20px 15px;
 }
 .modalWrapper p{
-  font-size: var( --size18 ); text-align: justify;
+  font-size: var( --size18 ); text-align: center;
 }
+.modalWrapper p span{ color: var(--successbg);}
 .modalBtns ion-button{
   width: auto;
   border-radius: 12px;
   font-weight: 300;  
   letter-spacing: 0.5px;  
+  min-width: 85px;
 }
 .modalBtns ion-button::part(native){ padding: 10px 20px 5px;}
 .modalBtns ion-button.sm::part(native){ height: 33px; font-size: 17px; padding: 5px 15px; min-width: 90px;border-radius: 50px;
-  box-shadow: 1px 2px 5px rgba(0,0,0,0.3);padding-top: 10px;--background-focused:hsla(0, 0%, 91%, 0.162);--background-hover: hsla(0, 0%, 91%, 0.162); --background-activated:hsla(0, 0%, 91%, 0.162);padding: 0;}
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.3);padding-top: 10px;--background-focused:hsla(0, 0%, 91%, 0.162);--background-hover: hsla(0, 0%, 91%, 0.162); --background-activated:hsla(0, 0%, 91%, 0.162);padding: 5px 10px 1px;}
 ion-button.success::part(native){ background-color: var(--successbg);}
 ion-button.warning::part(native){ background-color: var(--warningbg);}
 ion-button.error::part(native){ background-color: var(--errorbg);}

@@ -8,8 +8,8 @@
           </h5>
 					<figure class="fileicon"> <span class="svgicon xl" v-html="$store.state.configfile"> </span> </figure>
 					<div class="modalBtns flex-box space-between">
-						<ion-button @click="navguidedProfiles" class="sm success" mode="ios">Yes</ion-button>
-						<ion-button @click="navconfigVAC" class="sm error" mode="ios">No</ion-button>
+						<ion-button @click="navguidedProfiles" class="btnsuccess" mode="ios">Yes</ion-button>
+						<ion-button @click="navconfigVAC" class="btnerror" mode="ios">No</ion-button>
 					</div>
 				</div>
 			</div>

@@ -10,20 +10,20 @@
             <span class="svgicon xl" v-html="$store.state.exclamation"> </span>
           </figure>
           <div class="modalBtns flex-box space-between">
-            <ion-button class="sm success" mode="ios">Yes</ion-button>
-            <ion-button id="finish-guided" class="sm error" mode="ios">No</ion-button>
+            <ion-button class="btnsuccess" mode="ios">Yes</ion-button>
+            <ion-button id="finish-guided" class="btnerror" mode="ios">No</ion-button>
           </div>
           <ion-modal id="example-modal" ref="modal" trigger="finish-guided">
             <div class="modalWrapper">
-              <div class="modalIcontype success" style="line-height: 103px">
-                <span class="svgicon lg" v-html="$store.state.checkmark"></span>
+              <div class="modalIcontype success" style="line-height: 80px">
+                <span class="svgicon md" v-html="$store.state.checkmark"></span>
               </div>
               <div class="modalInfo">
                 <h5 class="successmsg">Successfully completed Guided Setup</h5>
                 <p class="mt-0">Amplifier in <span>Manual Mode</span></p>
               </div>
               <div class="modalBtns flex-box justify-center">
-                <ion-button class="sm success" mode="ios" @click="navmainmenu">Finish</ion-button>
+                <ion-button class="btnsuccess" mode="ios" @click="navmainmenu">Finish</ion-button>
               </div>
             </div>
           </ion-modal>

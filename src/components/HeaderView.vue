@@ -72,7 +72,7 @@ export default {
           "guidedsetup", "downstreamlevelselection", "trunkleveldetailview", "guidedconfigfile", 
           "guidedconfigurevacthresholds", "guidedsetuppilotsetup", "guidedamplifieroffset", 
           "gaintiltfreq", "downstreamleveladjustment", "upstreaminputattenuationsettingmanual", 
-          "guidedamplifiermode", "guidedprofilesinfo"
+          "guidedamplifiermode", "guidedprofilesinfo", "upstreamleveladjustment"
         ].map(key => [key, "Guided Setup"]))
       };
       return pathArr[path];
