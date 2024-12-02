@@ -45,6 +45,7 @@
   
   <script>
   import { useRouter } from "vue-router";     
+import eventBus from "../../assets/script/eventBus";
   export default {
     name: "IngressControlSwitch",
     data(){
@@ -56,6 +57,14 @@
       return {        
         router,
       };
+    },
+    mounted() { 
+      eventBus().emitter.on("evtbackIngressControlSwitch",()=>{
+        this.$router.push("/amplifier/advanceddiagnostics");
+      });
+    },
+    unmounted() {
+      eventBus().emitter.off("evtbackIngressControlSwitch");
     },
   };
   </script>

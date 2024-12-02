@@ -33,6 +33,7 @@
 
 <script>
 import { useRouter } from "vue-router";
+import eventBus from "../assets/script/eventBus";
 
 export default {
   name: "ConnectionEstablished",
@@ -41,6 +42,14 @@ export default {
     return {
       router,
     };
+  },
+  mounted() { 
+    eventBus().emitter.on("evtbackConnectionEstablished",()=>{
+      this.$router.push("/amplifier/selectdevice");
+    });
+  },
+  unmounted() {
+    eventBus().emitter.off("evtbackConnectionEstablished");
   },
   methods: {
     navmainmenu: function () {      

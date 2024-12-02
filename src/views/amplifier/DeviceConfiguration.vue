@@ -52,6 +52,7 @@
   <script>
   import { useRouter } from "vue-router";
   import SpinControl from "../../components/SpinControl.vue";
+import eventBus from "../../assets/script/eventBus";
   
   export default {
     name: "DeviceConfiguration",
@@ -68,6 +69,14 @@
       return {        
         router,
       };
+    },
+    mounted() { 
+      eventBus().emitter.on("evtbackDeviceConfiguration",()=>{
+        this.$router.push("/amplifier/mainmenu");
+      });
+    },
+    unmounted() {
+      eventBus().emitter.off("evtbackDeviceConfiguration");
     },
   };
   </script>

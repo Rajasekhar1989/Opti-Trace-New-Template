@@ -21,6 +21,7 @@
 
 <script>
 import { useRouter } from "vue-router";
+import eventBus from "../../assets/script/eventBus";
 export default {
   name: "TestMode",
   data() {
@@ -33,6 +34,14 @@ export default {
     return {
       router,
     };
+  },
+  mounted() {
+    eventBus().emitter.on("evtbackTestMode", () => {
+      this.$router.push("/amplifier/utilitiesmenu");
+    });
+  },
+  unmounted() {
+    eventBus().emitter.off("evtbackTestMode");
   },
 };
 </script>

@@ -74,7 +74,9 @@
             <div class="custominput noicon mb-15">
                 <ion-input aria-label="Number"></ion-input>
             </div>
-            <h6 class="subtitle mb-10"><span class="text">Setup Configuration</span> <ion-button fill="clear" id="more-info"><span class="svgicon w20" v-html="$store.state.moreinfo"></span></ion-button></h6>            
+            <h6 class="subtitle mb-10"><span class="text">Setup Configuration</span>
+                <ion-button fill="clear" id="more-info"><span class="svgicon w20" v-html="$store.state.moreinfo"></span></ion-button>
+            </h6>            
             <ion-modal id="example-modal" ref="modal" trigger="more-info">
                 <div class="modalWrapper">
                     <div class="modalIcontype warning">                          
@@ -84,7 +86,7 @@
                         <p class="mt-0">Update Setup Configuration, Gain and Tilt Settings by changing from Manual to AGC Mode.</p>
                     </div>                        
                     <div class="setBtn center">
-                        <ion-button class="btnprimary" mode="ios" >OK</ion-button>                    
+                        <ion-button class="btnprimary" mode="ios" @click="closeModal">OK</ion-button>                    
                     </div>
                 </div>
             </ion-modal>
@@ -150,6 +152,7 @@
 
 <script>
 import { useRouter } from 'vue-router';
+import eventBus from '../../assets/script/eventBus';
 
 export default {
   name: "DeviceInformation",
@@ -158,6 +161,19 @@ export default {
     return {
       router,
     };
-  },  
+  },
+  mounted() { 
+        eventBus().emitter.on("evtbackDeviceInformation",()=>{
+        this.$router.push("/amplifier/utilitiesmenu");
+        });
+    },
+    unmounted() {
+        eventBus().emitter.off("evtbackDeviceInformation");
+    },
+  methods: {
+    closeModal() {
+      this.$refs.modal.$el.dismiss();
+    },
+  }
 }
 </script>

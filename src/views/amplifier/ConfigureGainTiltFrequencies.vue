@@ -71,11 +71,16 @@
       };
     },
     mounted() {
+      eventBus().emitter.on("evtbackConfigureGainTiltFrequencies",()=>{
+        this.$router.push("/amplifier/guidedsetuppilotsetup");
+      });
       eventBus().emitter.on("evtcontinueConfigureGainTiltFrequencies",()=>{
+        localStorage.setItem("guidedDSPath","/amplifier/gaintiltfreq");
         this.$router.push("/amplifier/downstreamleveladjustment");
       });
     },
     unmounted() {
+      eventBus().emitter.off("evtbackConfigureGainTiltFrequencies");
       eventBus().emitter.off("evtcontinueConfigureGainTiltFrequencies");
     },
   };

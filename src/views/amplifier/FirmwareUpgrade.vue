@@ -33,6 +33,7 @@
   <script>
   import { useRouter } from "vue-router";   
   import { ref } from 'vue';  
+import eventBus from "../../assets/script/eventBus";
   export default {
     name: "FirmwareUpgrade",   
     data(){
@@ -48,7 +49,11 @@
         router,
       };
     },
+   
     mounted() {
+      eventBus().emitter.on("evtbackFirmwareUpgrade",()=>{
+        this.$router.push("/amplifier/utilitiesmenu");
+      });
       setInterval(() => {
         this.progress += 0.01;
 
@@ -60,7 +65,10 @@
           }, 1000);
         }
       }, 50);
-    }
+    },
+    unmounted() {
+        eventBus().emitter.off("evtbackFirmwareUpgrade");
+    },
   };
   </script>
   

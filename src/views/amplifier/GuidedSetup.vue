@@ -35,11 +35,15 @@
       };
     },
     mounted() {
+      eventBus().emitter.on("evtbackGuidedSetup",()=>{
+        this.$router.push("/amplifier/connectionestablished");
+      });
       eventBus().emitter.on("evtcontinueGuidedSetup",()=>{
         this.$router.push("/amplifier/downstreamlevelselection");
       });
     },
     unmounted() {
+      eventBus().emitter.off("evtbackGuidedSetup");
       eventBus().emitter.off("evtcontinueGuidedSetup");
     },
     

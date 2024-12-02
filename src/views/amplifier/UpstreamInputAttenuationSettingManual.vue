@@ -34,11 +34,15 @@
       };
     },
     mounted() {
+      eventBus().emitter.on("evtbackUpstreamInputAttenuationSettingManual",()=>{
+        this.$router.push("/amplifier/downstreamleveladjustment");
+      });
       eventBus().emitter.on("evtcontinueUpstreamInputAttenuationSettingManual",()=>{
         this.$router.push("/amplifier/upstreamleveladjustment");
       });
     },
     unmounted() {
+      eventBus().emitter.off("evtbackUpstreamInputAttenuationSettingManual");
       eventBus().emitter.off("evtcontinueUpstreamInputAttenuationSettingManual");
     },
   };

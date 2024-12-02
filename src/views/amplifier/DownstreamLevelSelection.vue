@@ -33,11 +33,15 @@
       };
     },
     mounted() {
+      eventBus().emitter.on("evtbackDownstreamLevelSelection",()=>{
+        this.$router.push("/amplifier/guidedsetup");
+      });
       eventBus().emitter.on("evtcontinueDownstreamLevelSelection",()=>{
         this.$router.push("/amplifier/trunkleveldetailview");
       });
     },
     unmounted() {
+      eventBus().emitter.off("evtbackDownstreamLevelSelection");
       eventBus().emitter.off("evtcontinueDownstreamLevelSelection");
     },
   };

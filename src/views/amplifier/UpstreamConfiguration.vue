@@ -62,6 +62,7 @@
   <script>
   import { useRouter } from "vue-router"; 
   import SpinControl from "../../components/SpinControl.vue";
+import eventBus from "../../assets/script/eventBus";
   
   export default {
     name: "UpstreamConfiguration",
@@ -78,6 +79,14 @@
       return {        
         router,
       };
+    },
+    mounted() { 
+      eventBus().emitter.on("evtbackUpstreamConfiguration",()=>{
+        this.$router.push("/amplifier/mainmenu");
+      });
+    },
+    unmounted() {
+      eventBus().emitter.off("evtbackUpstreamConfiguration");
     },
   };
   </script>

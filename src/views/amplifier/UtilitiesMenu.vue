@@ -40,6 +40,7 @@
   
   <script>
   import { useRouter } from "vue-router";   
+import eventBus from "../../assets/script/eventBus";
   
   export default {
     name: "UtilitiesMenu",
@@ -53,6 +54,14 @@
       return {        
         router,
       };
+    },
+    mounted() { 
+      eventBus().emitter.on("evtbackUtilitiesMenu",()=>{
+        this.$router.push("/amplifier/mainmenu");
+      });
+    },
+    unmounted() {
+      eventBus().emitter.off("evtbackUtilitiesMenu");
     },
     methods:{
       navfirmwareupgrade: function(){

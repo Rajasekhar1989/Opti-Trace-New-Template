@@ -100,11 +100,16 @@ export default {
     };
   },
   mounted() {
+    eventBus().emitter.on("evtbackGuidedProfilesInfo",()=>{
+        this.$router.push("/amplifier/guidedconfigfile");
+    });
     eventBus().emitter.on("evtcontinueGuidedProfilesInfo",()=>{
+        localStorage.setItem("guidedDSPath","/amplifier/guidedprofilesinfo");
         this.$router.push("/amplifier/downstreamleveladjustment");
     });
   },
   unmounted() {
+    eventBus().emitter.off("evtbackGuidedProfilesInfo");
     eventBus().emitter.off("evtcontinueGuidedProfilesInfo");
   },
   components: {

@@ -71,6 +71,7 @@
   
   <script>
   import { useRouter } from "vue-router";   
+import eventBus from "../../assets/script/eventBus";
   
   export default {
     name: "ProfilesInfo",
@@ -84,6 +85,14 @@
       return {        
         router,
       };
+    },
+    mounted() { 
+      eventBus().emitter.on("evtbackProfilesInfo",()=>{
+        this.$router.push("/amplifier/mainmenu");
+      });
+    },
+    unmounted() {
+      eventBus().emitter.off("evtbackProfilesInfo");
     },
   };
   </script>

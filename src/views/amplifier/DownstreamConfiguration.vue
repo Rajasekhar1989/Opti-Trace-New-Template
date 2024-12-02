@@ -128,6 +128,7 @@
   
   <script>
   import { useRouter } from "vue-router"; 
+import eventBus from "../../assets/script/eventBus";
   
   export default {
     name: "DownstreamConfiguration",
@@ -141,6 +142,14 @@
       return {        
         router,
       };
+    },
+    mounted() { 
+      eventBus().emitter.on("evtbackDownstreamConfiguration",()=>{
+        this.$router.push("/amplifier/mainmenu");
+      });
+    },
+    unmounted() {
+      eventBus().emitter.off("evtbackDownstreamConfiguration");
     },
   };
   </script>

@@ -1,4 +1,3 @@
-### Base component:
 <template>
   <ion-page>
     <ion-content class="ion-padding main-content">
@@ -84,6 +83,7 @@
 </template>
 <script>
 import { useRouter } from 'vue-router';
+import eventBus from '../../assets/script/eventBus';
 
 export default {
   name: "MainMenu",
@@ -93,6 +93,14 @@ export default {
       router,
     };
   },  
+  mounted() { 
+    eventBus().emitter.on("evtbackMainMenu",()=>{
+      this.$router.push("/amplifier/connectionestablished");
+    });
+  },
+  unmounted() {
+    eventBus().emitter.off("evtbackMainMenu");
+  },
   methods:{
     navHealthstatus:function(){
       this.$router.push("/amplifier/healthstatus");

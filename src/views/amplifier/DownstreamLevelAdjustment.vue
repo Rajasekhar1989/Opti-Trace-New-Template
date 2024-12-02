@@ -132,11 +132,18 @@
       };
     },
     mounted() {
+        eventBus().emitter.on("evtbackDownstreamLevelAdjustment",()=>{
+            let getPath = localStorage.getItem("guidedDSPath");
+            if(getPath != undefined && getPath != null){
+                this.$router.push(getPath);
+            }            
+        });
       eventBus().emitter.on("evtcontinueDownstreamLevelAdjustment",()=>{
         this.$router.push("/amplifier/upstreaminputattenuationsettingmanual");
       });
     },
     unmounted() {
+        eventBus().emitter.off("evtbackDownstreamLevelAdjustment");
       eventBus().emitter.off("evtcontinueDownstreamLevelAdjustment");
     },
   };

@@ -22,6 +22,7 @@
   
   <script>
   import { useRouter } from "vue-router";   
+import eventBus from "../../assets/script/eventBus";
   
   export default {
     name: "AdvancedDiagnostics",
@@ -35,6 +36,14 @@
       return {        
         router,
       };
+    },
+    mounted() { 
+      eventBus().emitter.on("evtbackAdvancedDiagnostics",()=>{
+        this.$router.push("/amplifier/mainmenu");
+      });
+    },
+    unmounted() {
+      eventBus().emitter.off("evtbackAdvancedDiagnostics");
     },
     methods:{
       navingresscontrolswitch : function(){

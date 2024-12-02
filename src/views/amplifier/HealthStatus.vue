@@ -130,6 +130,7 @@
 
 <script>
 import { useRouter } from 'vue-router';
+import eventBus from '../../assets/script/eventBus';
 
 export default {
   name: "HealhStatus",
@@ -143,6 +144,14 @@ export default {
     return {
       router,
     };
+  },
+  mounted() { 
+    eventBus().emitter.on("evtbackHealthStatus",()=>{
+      this.$router.push("/amplifier/mainmenu");
+    });
+  },
+  unmounted() {
+    eventBus().emitter.off("evtbackHealthStatus");
   },
   methods:{
     navthresholdconfig: function(){
