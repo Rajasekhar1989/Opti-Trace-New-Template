@@ -10,16 +10,16 @@
                 </ion-select>
                 <div class="flex-box justify-center gap-15">
                     <div class="setBtn">
-                    <ion-button class="btnprimary" mode="ios" disabled><span> Edit</span></ion-button>
+                        <ion-button class="btnprimary" mode="ios" disabled><span> Edit</span></ion-button>
                     </div>    
                     <div class="setBtn">
-                    <ion-button class="btnerror" mode="ios" disabled><span> Delete</span></ion-button>
+                        <ion-button class="btnerror" mode="ios" disabled><span> Delete</span></ion-button>
                     </div>            
                 </div>        
             </div>    
             <ion-row>
             <ion-col size-md="6" size="12">
-                <ion-button class="btnprimary full mb-10">Upload Profile from Phone</ion-button>
+                <ion-button class="btnprimary full">Upload Profile from Phone</ion-button>
             </ion-col>
             <ion-col size-md="6" size="12">
                 <ion-button class="btnprimary full mb-10">Apply Profile To Amplifier</ion-button>

@@ -30,7 +30,7 @@
 						<!-- <span class="angle-icon" v-html="$store.state.angleright"></span>  --></div>
 				</ion-label>
 			</ion-item>
-			<ion-item>
+			<ion-item @click="navfirmwareupgrade">
 				<ion-label>
 					<div> <span class="device-icon" v-html="$store.state.upgradefirmware"></span> <span class="device-name">Firmware Upgrade</span>
 						<!-- <span class="angle-icon" v-html="$store.state.upgradefirmware"></span>  --></div>
@@ -69,6 +69,9 @@ export default {
     btnLogout: function () {
 		ConfirmationMsg("Are you sure you want to logout?", "logout");
     },
+	navfirmwareupgrade: function(){
+		this.$router.push("/amplifier/firmwareupgrade");
+	}
   },
 };
 </script>
