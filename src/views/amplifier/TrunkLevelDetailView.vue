@@ -9,8 +9,8 @@
             </ion-radio-group>
         </div> 
         <h5 class="cardtitle">Trunking pad Value</h5>    
-        <SpinControl />
-        <SpinControl />        
+        <SpinControl :label="'Port 2 (dB)'" />
+        <SpinControl :label="'Port 3/4 (dB)'"/>        
         <div class="setBtn center">
             <ion-button class="btnprimary" mode="ios"><span> Set</span></ion-button>
         </div>

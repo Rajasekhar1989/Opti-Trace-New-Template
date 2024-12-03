@@ -53,6 +53,8 @@ export default {
         "thresholdconfig" : "Health Status",
         "deviceconfiguration" : "Device Configuration", 
         "downstreamconfiguration" : "Downstream Configuration",
+        "configuresettings":'Downstream Configuration',
+        "pilotsetup":'Downstream Configuration',
         "upstreamconfiguration" : "Upstream Configuration",
         "advanceddiagnostics" : "Advanced Diagnostics",
         "ingresscontrolswitch" : "Ingress Control Switch",

@@ -9,19 +9,19 @@
         </ion-select>
         <div class="flex-box justify-center gap-15">
             <div class="setBtn">
-              <ion-button class="btnprimary" mode="ios"><span> Edit</span></ion-button>
+              <ion-button class="btnprimary" mode="ios" disabled><span> Edit</span></ion-button>
             </div>    
             <div class="setBtn">
-              <ion-button class="btnerror" mode="ios"><span> Delete</span></ion-button>
+              <ion-button class="btnerror" mode="ios" disabled><span> Delete</span></ion-button>
             </div>            
         </div>        
     </div>    
     <ion-row>
-      <ion-col size-md="6" size="12">
-        <ion-button class="btnprimary full mb-10">Upload Profile from Phone</ion-button>
+      <ion-col size-md="6" size="12" class="center">
+        <ion-button class="btnprimary lg">Upload Profile from Phone</ion-button>
       </ion-col>
-      <ion-col size-md="6" size="12">
-        <ion-button class="btnprimary full mb-10">Apply Profile To Amplifier</ion-button>
+      <ion-col size-md="6" size="12" class="center mb-15">
+        <ion-button class="btnprimary lg">Apply Profile To Amplifier</ion-button>
       </ion-col>
     </ion-row>
     <div class="card auto">
@@ -49,21 +49,37 @@
               <div slot="label">Amp ID</div>
           </ion-input>             
       </div> 
-    </div>
-    <h5 class="cardtitle mb-15">Downstream Configuration</h5>
-    <div class="card auto">
-      <h5 class="cardtitle">Pilot Frequencies</h5>      
-      <h6 class="subtitle">Pilots</h6>
+    </div>    
+    <div class="card auto">          
+      <h5 class="cardtitle">Downstream Configuration</h5>
+      <h6 class="subtitle">Pilot Frequencies</h6>
       <div class="custominput noicon">                                    
-          <ion-input label-placement="stacked" placeholder="99.0" required mode="ios" value="303">
+          <ion-input label-placement="stacked" placeholder="99.0" required mode="ios" value="0">
               <div slot="label">Pilot 1 (MHz)</div>
           </ion-input>             
       </div>  
-      <div class="custominput noicon mb-10">                                     
-          <ion-input label-placement="stacked" placeholder="Low Limit(V)" required mode="ios" value="1749">
+      <div class="custominput noicon mb-15">                                     
+          <ion-input label-placement="stacked" placeholder="Low Limit(V)" required mode="ios" value="0">
             <div slot="label">Pilot 2 (MHz)</div>
           </ion-input>             
       </div> 
+      <h6 class="subtitle">Gain and Tilt Frequencies</h6>
+      <div class="custominput noicon">                                    
+          <ion-input label-placement="stacked" placeholder="99.0" required mode="ios" value="0">
+              <div slot="label">Low Frequency (MHz)</div>
+          </ion-input>             
+      </div>  
+      <div class="custominput noicon mb-10">                                     
+          <ion-input label-placement="stacked" placeholder="Low Limit(V)" required mode="ios" value="0">
+            <div slot="label">High Frequency (MHz)</div>
+          </ion-input>             
+      </div> 
+    </div>
+    
+    <div class="card auto">
+      <h5 class="cardtitle">Upstream Configuration</h5>
+      <h6 class="subtitle">Upstream Input Attenuation</h6>      
+      <SpinControl :label="'Port 2 (dB)'" />
     </div>
     </ion-content>
     </ion-page>
@@ -72,6 +88,7 @@
   <script>
   import { useRouter } from "vue-router";   
 import eventBus from "../../assets/script/eventBus";
+import SpinControl from "../../components/SpinControl.vue";
   
   export default {
     name: "ProfilesInfo",
@@ -86,6 +103,9 @@ import eventBus from "../../assets/script/eventBus";
         router,
       };
     },
+    components:{
+      SpinControl
+    }, 
     mounted() { 
       eventBus().emitter.on("evtbackProfilesInfo",()=>{
         this.$router.push("/amplifier/mainmenu");

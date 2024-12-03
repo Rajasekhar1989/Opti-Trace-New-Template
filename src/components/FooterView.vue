@@ -50,7 +50,7 @@ export default {
       return (this.$route.path == '/amplifier/selectdevice' || this.$route.path == '/amplifier/guidedamplifiermode') ? false : true;
     },
     getbtn: function() {      
-      let pathArr = ["cadamenu", "wifisettings", "cadageneral", "cadautilities", "uploadpackage", "cadadeviceinformation", "connectionestablished", "mainmenu", "healthstatus", "thresholdconfig", "deviceconfiguration", "downstreamconfiguration", "upstreamconfiguration", "advanceddiagnostics", "ingresscontrolswitch", "utilitiesmenu", "deviceinformation", "firmwareupgrade", "testmode", "profilesinfo", "spectrumdisplay", "guidedconfigfile"];
+      let pathArr = ["cadamenu", "wifisettings", "cadageneral", "cadautilities", "uploadpackage", "cadadeviceinformation", "connectionestablished", "mainmenu", "healthstatus", "thresholdconfig", "deviceconfiguration", "downstreamconfiguration", "upstreamconfiguration", "advanceddiagnostics", "ingresscontrolswitch", "utilitiesmenu", "deviceinformation", "firmwareupgrade", "testmode", "profilesinfo", "spectrumdisplay", "guidedconfigfile", "configuresettings", "pilotsetup"];
       
       return (pathArr.indexOf(this.$route.path.split("/")[2]) < 0);
     },

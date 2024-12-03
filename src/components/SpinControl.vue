@@ -37,7 +37,7 @@ export default {
   name: "SpinControl",  
   data() {
     return {
-        spincontrollabel:"Spin Label",
+        spincontrollabel: this.label,
         minVal:0,
         maxVal:99,
         steps:1,
@@ -56,7 +56,8 @@ export default {
     };
   },
   props:{
-    spinProp : Array
+    spinProp : Array,
+    label: String
   },
   setup() {
     const router = useRouter();

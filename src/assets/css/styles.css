@@ -164,9 +164,10 @@ ion-progress-bar::part(progress){background-color: var(--themecolor);}
 
 .card{box-shadow:0px 1px 4px 0px rgba(0,0,0,0.25);background: #ffffff96;padding:15px;border-radius: 12px;max-width: 767px; width: 100%;margin: 0 auto;margin-bottom: 20px;}
 .card.auto{ width: auto;}
-.cardtitle{font-size: 22px;color:var(--paragraphcolor);font-weight: 600; margin-bottom: 0;line-height: 24px;}
+.cardtitle{font-size: 22px;color:var(--paragraphcolor);font-weight: 600; margin-bottom: 0;line-height: 24px;letter-spacing: 0.5px;}
 .subtitle {font-size: 15px;font-weight: 500;border: 1px solid var(--headingcolor);display: inline-block;border-radius: 5px;padding: 5px 10px 0px;margin-bottom: 0;line-height: 18px;min-width: 50px;
   text-align: center;}
+
 .card.center{text-align: center;}
 .card h2{font-size: 30px; letter-spacing: 0.5px;line-height: 24px;font-weight: 500;}
 .card h2 .version{ display: block; font-size: 13px; color: var(--black);line-height: 20px;letter-spacing: 0.5px;font-weight: normal;}
@@ -204,6 +205,9 @@ ion-button.lg::part(native), ion-button.md::part(native), ion-button.full::part(
 ion-button.sm{
   width: auto;
 }
+
+.subtitle ion-button{width: 25px;min-height: 20px;margin-left: 5px;}
+.subtitle ion-button::part(native) {padding: 0; height: auto;}
 .main-content{
   background: linear-gradient(180deg, rgba(238,247,255,1) 0%, rgba(177,216,251,1) 100%);
   --background: rgb(238,247,255);
@@ -352,6 +356,10 @@ ion-input label .label-text-wrapper{font-size: 20px;height: 20px;}
 ion-input label .native-wrapper{ height: 30px; padding-top: 4px;}
 form.login ion-input label .native-wrapper input.native-input{padding-left: 23px;}
 
+ion-textarea.sc-ion-textarea-ios-h, ion-textarea.sc-ion-textarea-md-h{--border-color:var(--black);}
+ion-textarea.label-floating.sc-ion-textarea-ios-h .label-text-wrapper.sc-ion-textarea-ios,
+ion-textarea.label-floating.sc-ion-textarea-md-h .label-text-wrapper.sc-ion-textarea-md{transform: none !important;}
+
 .customselect{margin-bottom: 10px;}
 ion-select{--placeholder-color:var(--black);--placeholder-opacity:0.8;border-bottom: 1px solid var(--paragraphcolor);--highlight-color: rgba(14,98,171,1);}
 ion-select::part(label) {font-size: 20px;color:var(--black);height: 25px;}
@@ -371,7 +379,7 @@ ion-action-sheet .action-sheet-wrapper .action-sheet-cancel.sc-ion-action-sheet-
 .main-header ion-toolbar{--background: rgb(237, 247, 255);background: rgb(237, 247, 255);}
 .main-header.lg ion-toolbar{--min-height: 95px;}
 .main-header ion-toolbar{--min-height:60px; --background: rgb(237, 247, 255);background: rgb(237, 247, 255);}
-.main-header .toolbar-title-default:last-of-type{--border-width:0px !important; padding-top: 10px;padding-bottom: 10px;}
+.main-header .toolbar-title-default:last-of-type{--border-width:0px !important; padding-top: 10px;}
 .main-header .header-background{-webkit-backdrop-filter:unset; backdrop-filter:unset;}
 ion-menu-button{ padding-top: 4px;padding-left: 5px;}
 .main-header ion-title{padding-inline-start: 55px;}
@@ -405,7 +413,7 @@ border-radius: 8px;padding: 4px 8px 1px 8px;font-size: 20px;}
 ion-title .connected-device em{ fill: #ffffff; }
 
 /* ion-footer{} */
-ion-footer ion-toolbar{--padding-top: 10px;--padding-start: 15px;--padding-end: 15px;--padding-start: 5px;--background:transparent;background: rgba(177, 216, 251, 1); }
+ion-footer ion-toolbar{--padding-top: 10px;--padding-start: 15px;--padding-end: 15px;--background:transparent;background: rgba(177, 216, 251, 1); }
 ion-footer.footer-toolbar-padding ion-toolbar:last-of-type{ padding-bottom: 10px;}
 ion-footer.footer-toolbar-padding ion-toolbar:first-of-type{ --border-width: 0;background: rgba(177, 216, 251, 1);}
 .flex-footer{display: flex; gap: 20px;}
@@ -535,12 +543,13 @@ ion-modal#example-modal {
   --overflow:visible !important;
   padding: 0 15px;
 }
+
 .modalIcontype{
   width: 60px;
   height: 60px;
   text-align: center;  
   border-radius: 50px;
-  line-height: 78px;
+  line-height: normal;
   position: absolute;
   top: -35px;
   left: 0;
@@ -548,6 +557,7 @@ ion-modal#example-modal {
   margin: 0 auto;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
   z-index: 1;
+  padding: 12px;
 }
 .modalIcontype .svgicon svg{
   width: 30px; height: 30px; margin: 0;

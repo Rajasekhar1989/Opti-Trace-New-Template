@@ -79,7 +79,7 @@
             <div class="card auto">
                 <h5 class="cardtitle mb-15">Upstream Configuration</h5>            
                 <h6 class="subtitle">Upstream Input Attenuation</h6>
-                <SpinControl />
+                <SpinControl :label="'Port 2 (dB)'" />
             </div>
         </ion-content>
     </ion-page>

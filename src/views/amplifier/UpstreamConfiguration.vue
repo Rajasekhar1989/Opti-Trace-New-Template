@@ -3,8 +3,7 @@
     <ion-content class="ion-padding main-content">
         <div class="card auto">      
             <h5 class="cardtitle">Input Attenuation</h5>
-            <SpinControl />
-            <SpinControl />
+            <SpinControl :label="'Port 2'" />            
         </div>
         <div class="card auto">
             <div class="configbtns">

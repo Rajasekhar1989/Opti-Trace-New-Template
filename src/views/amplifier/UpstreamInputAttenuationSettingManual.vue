@@ -4,7 +4,7 @@
         <div class="card auto">      
             <h5 class="cardtitle"> Upstream Input Attenuation </h5>
             <h6 class="subtitle mb-10">Input Attenuation</h6>
-            <SpinControl />    
+            <SpinControl :label="'Port 2 (dB)'" />    
             <div class="setBtn center">
                 <ion-button class="btnprimary" mode="ios"><span> Set</span></ion-button>
             </div>        

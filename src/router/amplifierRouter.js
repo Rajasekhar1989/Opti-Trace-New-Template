@@ -5,6 +5,8 @@ import HealthStatus from "../views/amplifier/HealthStatus.vue"
 import ThresholdConfig from "../views/amplifier/ThresholdConfig.vue"
 import DeviceConfiguration from "../views/amplifier/DeviceConfiguration.vue"
 import DownstreamConfiguration from "../views/amplifier/DownstreamConfiguration.vue"
+import PilotSetup from "../views/amplifier/PilotSetup.vue"
+import ConfigureSettings from "../views/amplifier/ConfigureSettings.vue"
 import UpstreamConfiguration from "../views/amplifier/UpstreamConfiguration.vue"
 import AdvancedDiagnostics from "../views/amplifier/AdvancedDiagnostics.vue";
 import UtilitiesMenu from "../views/amplifier/UtilitiesMenu.vue";
@@ -41,6 +43,9 @@ export default [
   { path: `${basePath}/thresholdconfig`, name: "ThresholdConfig", component: ThresholdConfig },  
   { path: `${basePath}/deviceconfiguration`, name: "DeviceConfiguration", component: DeviceConfiguration },  
   { path: `${basePath}/downstreamconfiguration`, name: "DownstreamConfiguration", component: DownstreamConfiguration },  
+  { path: `${basePath}/configuresettings`, name: "ConfigureSettings", component: ConfigureSettings },  
+  { path: `${basePath}/pilotsetup`, name: "PilotSetup", component: PilotSetup },  
+  
   { path: `${basePath}/upstreamconfiguration`, name: "UpstreamConfiguration", component: UpstreamConfiguration },    
   { path: `${basePath}/advanceddiagnostics`, name: "AdvancedDiagnostics", component: AdvancedDiagnostics },    
   { path: `${basePath}/utilitiesmenu`, name: "UtilitiesMenu", component: UtilitiesMenu },    
