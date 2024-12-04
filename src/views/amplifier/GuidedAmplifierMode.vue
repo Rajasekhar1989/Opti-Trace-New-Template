@@ -15,7 +15,7 @@
           </div>
           <ion-modal id="example-modal" ref="modal" trigger="finish-guided">
             <div class="modalWrapper">
-              <div class="modalIcontype success" style="line-height: 80px">
+              <div class="modalIcontype success">
                 <span class="svgicon md" v-html="$store.state.checkmark"></span>
               </div>
               <div class="modalInfo">

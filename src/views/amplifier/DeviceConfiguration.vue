@@ -37,9 +37,27 @@
         </div>            
       </div>
       <div class="card auto">  
-        <h5 class="cardtitle">Trunking pad Value</h5>    
-        <SpinControl :label="`Port 2`" />
-        <SpinControl :label="`Port 3/4`"/>
+        <h5 class="cardtitle">Trunking pad Value</h5>
+        <SpinControl
+          :id="'control-port2'"
+          :label="'Port 2'"
+          :value="15"
+          :min="0"
+          :max="31.5"
+          :step="0.5"
+        />
+
+        <SpinControl
+          :id="'control-port3/4'"
+          :label="'Port 3/4'"
+          :value="15"
+          :min="0"
+          :max="31.5"
+          :step="0.5"
+        />
+
+
+
         <div class="setBtn center">
             <ion-button class="btnprimary" mode="ios"><span> Set</span></ion-button>
         </div> 

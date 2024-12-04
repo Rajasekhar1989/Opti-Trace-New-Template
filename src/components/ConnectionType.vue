@@ -5,7 +5,7 @@
 				<h3 class="heading">
           Connection Type <span>Select Wi-Fi or Bluetooth</span>
         </h3> </div>
-			<div class="middlearea" style="height: calc(100vh - 98px)">
+			<div class="middlearea" style="height: calc(100vh - 95px)">
 				<div class="card center about">
 					<ion-segment v-model="selectedSegment" mode="ios" class="sm" @ionChange="connChange">
 						<ion-segment-button value="wifi" mode="ios">

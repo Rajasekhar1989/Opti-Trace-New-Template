@@ -18,14 +18,20 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const isLoggedIn = localStorage.getItem("isLogin");
+  console.log("isLoggedIn : ", isLoggedIn);
+  
 
   // Redirect to login page if the user is not logged in and trying to access protected routes
   if (!isLoggedIn && to.name !== 'Login') {
     next('/login');  // Redirect to login page
-  } else {      
-      to.params.randomNumber = genDateTimeID();
-      from.params.randomNumber = genDateTimeID();
-      next();  // Proceed to the requested route
+  } 
+  else if(isLoggedIn && to.name === 'Login') {
+    next("/amplifier/selectdevice"); 
+  }
+  else {      
+    to.params.randomNumber = genDateTimeID();
+    from.params.randomNumber = genDateTimeID();
+    next();  // Proceed to the requested route
   }
 });
 

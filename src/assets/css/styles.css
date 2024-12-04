@@ -205,7 +205,7 @@ ion-button.lg::part(native), ion-button.md::part(native), ion-button.full::part(
 ion-button.sm{
   width: auto;
 }
-
+ion-button.ion-activated::part(native){ --background-activated: transparent;}
 .subtitle ion-button{width: 25px;min-height: 20px;margin-left: 5px;}
 .subtitle ion-button::part(native) {padding: 0; height: auto;}
 .main-content{
@@ -461,7 +461,7 @@ ion-toggle::part(track){ height: 30px;width: 55px; position: relative;--track-ba
   border-bottom: 1px solid #7f819f;
 }
 .customSpincontrol ion-button {
-  --background: #fff;  
+  --background:transparent;  
   --box-shadow:none;
   width: 29px;height: 29px;
   --background-focused:transparent;
@@ -477,7 +477,7 @@ ion-toggle::part(track){ height: 30px;width: 55px; position: relative;--track-ba
 .customSpincontrol span.textbox{
   width: 100%;
 }
-.customSpincontrol span input{
+.customSpincontrol span input, .spin-control input{
   border: none;
   width: 100%;
   height: 30px;
@@ -491,14 +491,19 @@ ion-toggle::part(track){ height: 30px;width: 55px; position: relative;--track-ba
   border-radius: 5px;
   display: block;
   background-color: transparent !important;
-  text-align: center;    
+  text-align: center; 
+  border-radius: 0;
 }
 .customSpincontrol ion-button span{
   padding-top: 3px;
 }
-.customSpincontrol ion-button svg {
+.customSpincontrol ion-button svg, .spin-control ion-button svg {
   width: 26px;height: 26px; fill: var(--headingcolor);
 }
+.spin-control input{ background-color: transparent;border: none;border-bottom: 1px solid #242424; appearance: none;-webkit-appearance:none;-moz-appearance:textfield;height: 35px;}
+.spin-control .control-container ion-button{ border-bottom: 1px solid var(--paragraphcolor); width: 53px;height: 35px;}
+.spin-control .control-container ion-button::part(native){ background: transparent;padding: 0;box-shadow: none;}
+
 
 .configbtns{ display: flex; justify-content: space-between; }
 .configbtns ion-button{max-width: 60px;}

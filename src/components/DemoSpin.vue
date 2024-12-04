@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content class="ion-padding main-content">
       <div>
-        <SpinControl
+        <!-- <SpinControl
           :id="'control-a'"
           :label="'Control A'"
           :value="controlAValue"
@@ -27,7 +27,7 @@
           :min="0"
           :max="31.5"
           :step="0.5"
-        />
+        /> -->
       </div>
 
       <button @click="btnUpdate">Update</button>
@@ -37,12 +37,12 @@
 
 <script>
 import eventBus from "../assets/script/eventBus";
-import SpinControl from "./TestSpin.vue";
+// import SpinControl from "./TestSpin.vue";
 
 export default {
   name: "DemoSpin",
   components: {
-    SpinControl,
+    // SpinControl,
   },
   data() {
     return {

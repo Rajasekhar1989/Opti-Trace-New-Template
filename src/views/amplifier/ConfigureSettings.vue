@@ -44,7 +44,6 @@
     
     <script>
     import { useRouter } from "vue-router";
-    import SpinControl from "../../components/SpinControl.vue";
   import eventBus from "../../assets/script/eventBus";
     
     export default {
@@ -54,9 +53,6 @@
             togglechk:false,
           }        
         },
-        components:{
-          SpinControl
-        }, 
       setup() {
         const router = useRouter();
         return {        

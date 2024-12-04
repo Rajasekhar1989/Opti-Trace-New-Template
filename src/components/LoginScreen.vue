@@ -7,7 +7,7 @@
                     <p><span class="svgicon" v-html="$store.state.wifi"></span> <span> CADA-1TS1</span></p>
                 </div>
             </div>        
-            <div class="middlearea" style="height: calc(100vh - 162px);">
+            <div class="middlearea" style="height: calc(100vh - 160px);">
                 <div class="card center about">
                     <form action="" class="login">
                         <ion-row>
