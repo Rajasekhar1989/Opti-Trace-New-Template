@@ -32,10 +32,13 @@ import GuidedAmplifierMode from "../views/amplifier/GuidedAmplifierMode.vue";
 import GuidedProfilesInfo from "../views/amplifier/GuidedProfilesInfo.vue";
 import DeviceInformation from "../views/amplifier/DeviceInformation.vue";
 
+import DemoSpin from "../components/DemoSpin.vue";
 
 const basePath = "/amplifier";
 
 export default [
+  { path: `${basePath}/demospin`, name: "DemoSpin", component: DemoSpin },
+  
   { path: `${basePath}/selectdevice`, name: "SelectDevice", component: SelectDevice },
   { path: `${basePath}/connectionestablished`, name: "ConnectionEstablished", component: ConnectionEstablished },
   { path: `${basePath}/mainmenu`, name: "MainMenu", component: MainMenu },
